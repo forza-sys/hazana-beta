@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Zakatizen - HAZANA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #f8fafc; color: #0f172a; line-height: 1.6; }
+        .header { background: #047857; color: white; padding: 3rem 1rem; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 800; }
+        .container { max-width: 1000px; margin: -2rem auto 2rem; padding: 0 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; border: 1px solid #e2e8f0; }
+        .card:hover { transform: translateY(-5px); border-color: #047857; }
+        .card-icon { font-size: 3rem; margin-bottom: 1rem; color: #047857; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .card p { color: #64748b; }
+        .back-link { display: inline-block; margin-top: 2rem; color: #047857; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Portal Zakatizen</h1>
+        <p>Pilih layanan informasi dan transparansi donasi Anda</p>
+    </div>
+    
+    <div class="container">
+        <div class="grid">
+            <a href="kurban.html" class="card">
+                <i class="fas fa-sheep card-icon"></i>
+                <h3>Kurban 2026</h3>
+                <p>Lihat data penghimpunan dan penyaluran kurban secara live</p>
+            </a>
+            <a href="ramadan.html" class="card">
+                <i class="fas fa-moon card-icon"></i>
+                <h3>Ramadan 2026</h3>
+                <p>Pantau laporan penghimpunan ZIS selama bulan suci Ramadan</p>
+            </a>
+            <a href="hazana-pitchdeck.html" class="card">
+                <i class="fas fa-file-powerpoint card-icon"></i>
+                <h3>Pitchdeck FOZ</h3>
+                <p>Mengenal lebih dekat visi dan misi ekosistem Hazana</p>
+            </a>
+        </div>
+        <div style="text-align: center;">
+            <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Kembali ke Beranda Utama</a>
+        </div>
+    </div>
+</body>
+</html>

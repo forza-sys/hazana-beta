@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HAZANA ERP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <style>
+        :root {
+            --primary: #047857;
+            --primary-dark: #064e3b;
+            --bg-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: white;
+            width: 100%;
+            max-width: 400px;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+        }
+
+        .logo-icon {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .input-field:focus {
+            border-color: var(--primary);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+    </style>
+    <link rel="stylesheet" href="css/ai-assistant.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">H</div>
+            HAZANA
+        </a>
+
+        <div class="login-header">
+            <h1>Masuk ke Sistem</h1>
+            <p>Silakan masukkan email dan password Anda.</p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-group">
+            <label class="form-label">Email Institusi</label>
+            <input type="email" id="email" class="input-field" placeholder="contoh@lembaga.or.id">
+        </div>
+        <div class="form-group">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <label class="form-label" style="margin-bottom: 0;">Password</label>
+                <a href="#" style="font-size: 0.75rem; color: var(--primary); text-decoration: none;">Lupa Password?</a>
+            </div>
+            <div style="position: relative;">
+                <input type="password" id="password" class="input-field" placeholder="••••••••" style="padding-right: 2.5rem;">
+                <i id="togglePassword" class="fas fa-eye" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-muted);"></i>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="loginError" style="display:none; background:#fef2f2; color:#dc2626; padding:0.75rem 1rem; border-radius:8px; font-size:0.875rem; margin-bottom:1rem; border:1px solid #fecaca;">
+        </div>
+
+        <button id="loginBtn" class="btn btn-primary">Masuk</button>
+
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Kembali ke Portal Publik</a>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Fitur Intip Password (Tekan & Tahan)
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        const showPassword = () => {
+            passwordInput.setAttribute('type', 'text');
+            togglePassword.classList.replace('fa-eye', 'fa-eye-slash');
+        };
+
+        const hidePassword = () => {
+            passwordInput.setAttribute('type', 'password');
+            togglePassword.classList.replace('fa-eye-slash', 'fa-eye');
+        };
+
+        // Untuk Mouse
+        togglePassword.addEventListener('mousedown', showPassword);
+        togglePassword.addEventListener('mouseup', hidePassword);
+        togglePassword.addEventListener('mouseleave', hidePassword); // Jika kursor geser keluar saat ditekan
+
+        // Untuk Layar Sentuh (HP)
+        togglePassword.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            showPassword();
+        });
+        togglePassword.addEventListener('touchend', hidePassword);
+
+        document.getElementById('loginBtn').addEventListener('click', async () => {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const loginBtn = document.getElementById('loginBtn');
+            const errorEl = document.getElementById('loginError');
+
+            if (!email || !password) {
+                errorEl.textContent = 'Silakan isi email dan password.';
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            // Reset error & tampilkan loading
+            errorEl.style.display = 'none';
+            loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
+            loginBtn.disabled = true;
+
+            const result = await HazanaAuth.login(email, password);
+
+            if (result.success) {
+                loginBtn.innerHTML = '<i class="fas fa-check"></i> Berhasil!';
+                const redirectPath = HazanaAuth.getRedirectPath(result.role);
+                setTimeout(() => { window.location.href = redirectPath; }, 500);
+            } else {
+                errorEl.textContent = result.error || 'Email atau password salah.';
+                errorEl.style.display = 'block';
+                loginBtn.innerHTML = 'Masuk';
+                loginBtn.disabled = false;
+            }
+        });
+
+        // Login dengan Enter
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') document.getElementById('loginBtn').click();
+        });
+    </script>
+    <script src="js/ai-assistant.js"></script>
+</body>
+</html>
