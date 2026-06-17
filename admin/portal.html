@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Modul Internal - HAZANA ERP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/erp.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-config.js"></script>
+    <style>
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .portal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .portal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-color: transparent;
+        }
+
+        .portal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .portal-card:hover::before {
+            opacity: 1;
+        }
+
+        .portal-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+
+        .portal-card:hover .portal-icon {
+            background: var(--primary-light);
+            transform: scale(1.05);
+        }
+
+        .portal-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .portal-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .portal-action {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 0.5rem;
+        }
+
+        .portal-action i {
+            transition: transform 0.2s;
+        }
+
+        .portal-card:hover .portal-action i {
+            transform: translateX(4px);
+        }
+
+        /* Specific Color Themes */
+        .theme-sekretariat .portal-icon { color: #3b82f6; }
+        .theme-sekretariat:hover .portal-icon { background: #eff6ff; }
+        
+        .theme-ul1 .portal-icon { color: #10b981; }
+        .theme-ul1:hover .portal-icon { background: #d1fae5; }
+        
+        .theme-exec .portal-icon { color: #f59e0b; }
+        .theme-exec:hover .portal-icon { background: #fef3c7; }
+
+        .theme-shield .portal-icon { color: #ef4444; }
+        .theme-shield:hover .portal-icon { background: #fee2e2; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content expanded">
+            <div class="app-container">
+                
+                <!-- Top Navigation -->
+                <nav class="top-nav">
+                    <div class="page-title">
+                        <h1>Portal Modul Internal</h1>
+                        <p>Akses cepat ke seluruh modul operasional HAZANA ERP.</p>
+                    </div>
+                    <div class="user-actions">
+                        <div class="user-profile">
+                            <div class="user-avatar"><i class="fas fa-user-shield"></i></div>
+                            <div class="user-info">
+                                <span class="name" id="user-name">Memuat...</span>
+                                <span class="email" id="user-role">Super Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Portal Grid -->
+                <div class="portal-grid">
+                    
+                    <!-- Kartu Sekretariat -->
+                    <a href="../sekretariat/dashboard.html" class="portal-card theme-sekretariat">
+                        <div class="portal-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div>
+                            <h3>Sekretariat FOZ</h3>
+                            <p>Kelola data keanggotaan institusi, profil lembaga, dan verifikasi dokumen legal.</p>
+                        </div>
+                        <div class="portal-action">
+                            Buka Modul <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Kartu Unit Layanan 1 -->
+                    <a href="../unit-layanan-1/iuran-anggota.html" class="portal-card theme-ul1">
+                        <div class="portal-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div>
+                            <h3>Unit Layanan 1 (Iuran)</h3>
+                            <p>Pantau pembayaran iuran anggota, buat invoice otomatis, dan kirimkan reminder.</p>
+                        </div>
+                        <div class="portal-action">
+                            Buka Modul <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Kartu Tim Eksekutif -->
+                    <a href="../executive/dashboard.html" class="portal-card theme-exec">
+                        <div class="portal-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h3>Dashboard ZIS</h3>
+                            <p>Pantau agregasi data penghimpunan dan penyaluran ZIS secara nasional.</p>
+                        </div>
+                        <div class="portal-action">
+                            Buka Modul <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Kartu Karantina Data -->
+                    <a href="../executive/data-karantina.html" class="portal-card theme-shield">
+                        <div class="portal-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <div>
+                            <h3>Karantina Data</h3>
+                            <p>Validasi data-data anomali atau belum terverifikasi sebelum masuk ke dashboard nasional.</p>
+                        </div>
+                        <div class="portal-action">
+                            Buka Modul <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const user = await HazanaAuth.guardRole(['SUPER_ADMIN']);
+            if (user) {
+                window.HAZANA_USER = user;
+                const event = new Event('hazana:user-ready');
+                window.dispatchEvent(event);
+                
+                document.getElementById('user-name').textContent = user.nama_lengkap || user.email;
+            }
+        });
+    </script>
+</body>
+</html>
