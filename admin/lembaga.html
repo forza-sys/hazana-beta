@@ -80,10 +80,9 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>NAMA LEMBAGA & SK</th>
-                                <th>TINGKAT</th>
-                                <th>WILAYAH KERJA</th>
-                                <th>STATUS FOZ</th>
+                                <th>NAMA LEMBAGA</th>
+                                <th>SKALA</th>
+                                <th>STATUS ANGGOTA</th>
                                 <th>AKSI</th>
                             </tr>
                         </thead>
@@ -110,24 +109,20 @@
                 <input type="hidden" id="lembaga-id">
                 <div class="form-group">
                     <label>Nama Lembaga</label>
-                    <input type="text" id="nama_lembaga" class="form-control" required placeholder="Contoh: LAZISMU">
+                    <input type="text" id="nama_lembaga" class="form-control" required placeholder="Contoh: Dompet Dhuafa">
                 </div>
                 <div class="form-group">
-                    <label>Nomor SK Kemenag</label>
-                    <input type="text" id="sk_kemenag" class="form-control" placeholder="Opsional">
-                </div>
-                <div class="form-group">
-                    <label>Tingkat</label>
-                    <select id="tingkat" class="form-control" required>
-                        <option value="">-- Pilih Tingkat --</option>
-                        <option value="Nasional">Nasional</option>
-                        <option value="Provinsi">Provinsi</option>
-                        <option value="Kabupaten/Kota">Kabupaten/Kota</option>
+                    <label>Skala / Tipe Lembaga</label>
+                    <select id="tipe_lembaga" class="form-control" required>
+                        <option value="">-- Pilih Skala --</option>
+                        <option value="LAZNAS">LAZ Nasional</option>
+                        <option value="LAZPROV">LAZ Provinsi</option>
+                        <option value="LAZKAB">LAZ Kabupaten/Kota</option>
+                        <option value="UPZ">UPZ</option>
+                        <option value="BAZNAS_PUSAT">BAZNAS Pusat</option>
+                        <option value="BAZNAS_PROV">BAZNAS Provinsi</option>
+                        <option value="BAZNAS_KABKOTA">BAZNAS Kabupaten/Kota</option>
                     </select>
-                </div>
-                <div class="form-group">
-                    <label>Provinsi</label>
-                    <input type="text" id="provinsi" class="form-control" required placeholder="Contoh: Jawa Barat">
                 </div>
                 <div class="form-actions">
                     <button type="button" class="btn" onclick="closeLembagaModal()">Batal</button>
