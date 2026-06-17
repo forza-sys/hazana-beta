@@ -78,3 +78,22 @@ USING (
 -- RULE 4: Admin FOZ memiliki akses penuh (SELECT, INSERT, UPDATE, DELETE)
 -- ke tabel lembaga_aliases untuk melakukan "Mapping/Karantina" secara manual.
 -- (Policy Admin ini akan disempurnakan di script autentikasi berikutnya).
+
+-- RULE 2: Super Admin memiliki akses penuh (INSERT, UPDATE, DELETE)
+CREATE POLICY "Super Admin Full Access Master Lembaga" 
+ON master_lembaga
+FOR ALL
+USING (
+    EXISTS (
+        SELECT 1 FROM profiles 
+        WHERE profiles.id = auth.uid() 
+        AND profiles.role = 'SUPER_ADMIN'
+    )
+)
+WITH CHECK (
+    EXISTS (
+        SELECT 1 FROM profiles 
+        WHERE profiles.id = auth.uid() 
+        AND profiles.role = 'SUPER_ADMIN'
+    )
+);
