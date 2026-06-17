@@ -151,9 +151,6 @@
         });
     }
 
-        });
-    }
-
     function initSidebarEvents() {
         const sidebar = document.getElementById('main-sidebar');
         const desktopBtn = document.getElementById('desktop-menu-btn');
