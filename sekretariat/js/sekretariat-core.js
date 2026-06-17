@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function initSekretariat() {
     const user = window.HAZANA_USER;
-    if (user.role !== 'TIM_SEKRETARIAT' && user.role !== 'ADMIN_FOZ') {
+    if (user.role !== 'TIM_SEKRETARIAT' && user.role !== 'SUPER_ADMIN') {
         window.location.href = '../index.html';
         return;
     }

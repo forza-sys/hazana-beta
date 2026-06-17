@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function initLembaga() {
     const user = window.HAZANA_USER;
-    if (user.role !== 'ADMIN_FOZ') {
+    if (user.role !== 'SUPER_ADMIN') {
         window.location.href = '../index.html';
         return;
     }

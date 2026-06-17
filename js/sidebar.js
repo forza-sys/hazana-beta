@@ -11,7 +11,7 @@
         const base = isSubFolder ? '../' : './';
 
         let menuHTML = '';
-        if (user.role === 'ADMIN_FOZ') {
+        if (user.role === 'SUPER_ADMIN') {
             menuHTML = `
                 <div class="menu-label">MANAJEMEN IT (SUPER ADMIN)</div>
                 <ul class="sidebar-menu">

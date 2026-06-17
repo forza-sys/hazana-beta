@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setTimeout(() => {
         if (!document.getElementById('user-name').textContent || document.getElementById('user-name').textContent === 'Memuat...') {
             document.getElementById('user-name').textContent = 'Admin (Test)';
-            document.getElementById('user-role').textContent = 'ADMIN_FOZ';
+            document.getElementById('user-role').textContent = 'SUPER_ADMIN';
             renderMockSekretariat();
             renderMockLembaga();
         }

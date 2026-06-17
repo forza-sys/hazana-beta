@@ -9,7 +9,7 @@ ALTER TABLE profiles DROP CONSTRAINT IF EXISTS profiles_role_check;
 -- 2. TAMBAHKAN CONSTRAINT ROLE YANG BARU
 ALTER TABLE profiles ADD CONSTRAINT profiles_role_check 
 CHECK (role IN (
-    'ADMIN_FOZ', 
+    'SUPER_ADMIN', 
     'ANGGOTA_FOZ', 
     'GUEST', 
     'TIM_SEKRETARIAT', 

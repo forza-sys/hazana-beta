@@ -8,7 +8,7 @@ const HazanaAuth = {
     PUBLIC_PAGES: ['login.html', 'index.html'],
 
     ROLE_PATHS: {
-        'ADMIN_FOZ': 'admin/dashboard.html',
+        'SUPER_ADMIN': 'admin/dashboard.html',
         'TIM_SEKRETARIAT': 'sekretariat/dashboard.html',
         'EXECUTIVE_FOZ': 'executive/dashboard.html',
         'ANGGOTA_FOZ': 'member/dashboard.html',
