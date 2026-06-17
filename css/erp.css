@@ -259,7 +259,7 @@ tr:hover { background-color: #f8fafc; }
 
 .sidebar-menu li.active a {
   background-color: white;
-  color: var(--primary-dark);
+  color: #1e3a8a;
   font-weight: 700;
 }
 
