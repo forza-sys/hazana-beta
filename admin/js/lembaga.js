@@ -22,21 +22,21 @@ async function initLembaga() {
 async function loadLembagaData() {
     try {
         const { data, error, count } = await supabaseClient
-            .from('master_lembaga')
+            .from('lembaga_zakat')
             .select('*', { count: 'exact' })
             .order('created_at', { ascending: false });
             
         if (error) {
             console.error("Error fetching lembaga:", error);
             if(error.code === '42P01') {
-                document.getElementById('lembaga-table-body').innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem;">Tabel master_lembaga belum dibuat di Supabase. Silakan eksekusi SQL script.</td></tr>`;
+                document.getElementById('lembaga-table-body').innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem;">Tabel lembaga_zakat belum dibuat di Supabase. Silakan eksekusi SQL script.</td></tr>`;
                 return;
             }
             throw error;
         }
         
         let total = data.length;
-        let anggota = data.filter(d => d.is_foz_member).length;
+        let anggota = data.filter(d => d.is_anggota_foz).length;
         let nonAnggota = total - anggota;
         
         document.getElementById('stat-total-lembaga').textContent = total;
@@ -63,15 +63,15 @@ function renderLembagaTable(data) {
                 <div style="font-weight: 700; color: var(--text-main);">${item.nama_lembaga}</div>
             </td>
             <td><span class="badge" style="background: #f1f5f9; color: #475569;">${item.jenis_lembaga || '-'}</span></td>
-            <td><span class="badge" style="background: #e0f2fe; color: #0369a1;">${item.tipe_lembaga || '-'}</span></td>
+            <td><span class="badge" style="background: #e0f2fe; color: #0369a1;">${item.tingkat || '-'}</span></td>
             <td>
-                ${item.is_foz_member 
+                ${item.is_anggota_foz 
                     ? '<span class="badge badge-success"><i class="fas fa-check-circle" style="margin-right: 4px;"></i> Anggota FOZ</span>' 
                     : '<span class="badge badge-warning"><i class="fas fa-clock" style="margin-right: 4px;"></i> Belum Anggota</span>'}
             </td>
             <td>
-                <button class="btn btn-sm" onclick="editLembaga('${item.lembaga_id}')" style="margin-right: 0.5rem;"><i class="fas fa-edit"></i> Edit</button>
-                <button class="btn btn-sm" onclick="deleteLembaga('${item.lembaga_id}')" style="color: var(--danger); border-color: #fca5a5;"><i class="fas fa-trash"></i></button>
+                <button class="btn btn-sm" onclick="editLembaga('${item.id}')" style="margin-right: 0.5rem;"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn btn-sm" onclick="deleteLembaga('${item.id}')" style="color: var(--danger); border-color: #fca5a5;"><i class="fas fa-trash"></i></button>
             </td>
         </tr>
     `).join('');
@@ -92,17 +92,17 @@ function closeLembagaModal() {
 async function editLembaga(id) {
     try {
         const { data, error } = await supabaseClient
-            .from('master_lembaga')
+            .from('lembaga_zakat')
             .select('*')
-            .eq('lembaga_id', id)
+            .eq('id', id)
             .single();
             
         if (error) throw error;
         
-        document.getElementById('lembaga-id').value = data.lembaga_id;
+        document.getElementById('lembaga-id').value = data.id;
         document.getElementById('nama_lembaga').value = data.nama_lembaga;
         document.getElementById('jenis_lembaga').value = data.jenis_lembaga || '';
-        document.getElementById('tipe_lembaga').value = data.tipe_lembaga || 'LAZNAS';
+        document.getElementById('tipe_lembaga').value = data.tingkat || 'LAZNAS';
         
         document.getElementById('modal-title').textContent = 'Edit Data Lembaga';
         document.getElementById('lembaga-modal').classList.add('active');
@@ -122,17 +122,17 @@ async function saveLembaga(e) {
     const payload = {
         nama_lembaga: document.getElementById('nama_lembaga').value,
         jenis_lembaga: document.getElementById('jenis_lembaga').value,
-        tipe_lembaga: document.getElementById('tipe_lembaga').value,
-        is_foz_member: false
+        tingkat: document.getElementById('tipe_lembaga').value,
+        is_anggota_foz: false
     };
     
     try {
         if (id) {
-            delete payload.is_foz_member; // Jangan timpa status anggota saat edit nama/tipe
-            const { error } = await supabaseClient.from('master_lembaga').update(payload).eq('lembaga_id', id);
+            delete payload.is_anggota_foz; // Jangan timpa status anggota saat edit nama/tipe
+            const { error } = await supabaseClient.from('lembaga_zakat').update(payload).eq('id', id);
             if (error) throw error;
         } else {
-            const { error } = await supabaseClient.from('master_lembaga').insert([payload]);
+            const { error } = await supabaseClient.from('lembaga_zakat').insert([payload]);
             if (error) throw error;
         }
         
@@ -151,7 +151,7 @@ async function deleteLembaga(id) {
     if (!confirm("Apakah Anda yakin ingin menghapus lembaga ini?")) return;
     
     try {
-        const { error } = await supabaseClient.from('master_lembaga').delete().eq('lembaga_id', id);
+        const { error } = await supabaseClient.from('lembaga_zakat').delete().eq('id', id);
         if (error) throw error;
         await loadLembagaData();
     } catch (e) {
