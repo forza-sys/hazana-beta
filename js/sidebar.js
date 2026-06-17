@@ -13,14 +13,10 @@
         let menuHTML = '';
         if (user.role === 'SUPER_ADMIN') {
             menuHTML = `
-                <div class="menu-label">MANAJEMEN IT (SUPER ADMIN)</div>
                 <ul class="sidebar-menu">
-                    <li><a href="${base}admin/dashboard.html"><i class="fas fa-users-cog"></i> <span>Verifikasi Akun</span></a></li>
-                    <li><a href="${base}admin/lembaga.html"><i class="fas fa-building"></i> <span>Database Lembaga</span></a></li>
-                </ul>
-                <div class="menu-label">INTERNAL FOZ</div>
-                <ul class="sidebar-menu">
-                    <li><a href="${base}admin/portal.html"><i class="fas fa-th-large"></i> <span>Modul Operasional</span></a></li>
+                    <li><a href="${base}admin/lembaga.html"><i class="fas fa-building"></i> <span>Lembaga</span></a></li>
+                    <li><a href="${base}admin/dashboard.html"><i class="fas fa-users-cog"></i> <span>Akun</span></a></li>
+                    <li><a href="${base}admin/portal.html"><i class="fas fa-th-large"></i> <span>Modul</span></a></li>
                 </ul>
             `;
         } else if (user.role === 'TIM_SEKRETARIAT') {
@@ -50,7 +46,7 @@
         const sidebarHTML = `
             <div class="mobile-header">
                 <button id="mobile-menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
-                <div class="mobile-logo">HAZANA ERP</div>
+                <div class="mobile-logo">HAZANA</div>
             </div>
             <aside class="sidebar collapsed">
                 <div class="sidebar-logo">
