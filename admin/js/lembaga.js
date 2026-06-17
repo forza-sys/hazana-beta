@@ -85,9 +85,11 @@ function renderLembagaTable(data) {
             <td><span class="badge" style="background: #f1f5f9; color: #475569;">${item.jenis_lembaga || '-'}</span></td>
             <td><span class="badge" style="background: #e0f2fe; color: #0369a1;">${item.tipe_lembaga || '-'}</span></td>
             <td>
-                ${item.is_foz_member 
-                    ? '<span class="badge badge-success"><i class="fas fa-check-circle" style="margin-right: 4px;"></i> Anggota</span>' 
-                    : '<span class="badge badge-warning"><i class="fas fa-clock" style="margin-right: 4px;"></i> Belum Anggota</span>'}
+                ${item.nama_lembaga === 'Forum Zakat' 
+                    ? '<span class="badge" style="background: #f1f5f9; color: #475569;">-</span>'
+                    : item.is_foz_member 
+                        ? '<span class="badge badge-success"><i class="fas fa-check-circle" style="margin-right: 4px;"></i> Anggota</span>' 
+                        : '<span class="badge badge-warning"><i class="fas fa-clock" style="margin-right: 4px;"></i> Belum Anggota</span>'}
             </td>
             <td>
                 <button class="btn btn-sm" onclick="editLembaga('${item.lembaga_id}')" style="margin-right: 0.5rem;" title="Edit"><i class="fas fa-edit"></i></button>
