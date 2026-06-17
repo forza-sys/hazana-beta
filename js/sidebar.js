@@ -11,7 +11,7 @@
         const base = isSubFolder ? '../' : './';
 
         let menuHTML = '';
-        if (user.role === 'SUPER_ADMIN') {
+        if (user.role === 'SUPER_ADMIN' || user.role === 'ADMIN_IT') {
             menuHTML = `
                 <ul class="sidebar-menu">
                     <li><a href="${base}admin/lembaga.html"><i class="fas fa-building"></i> <span>Lembaga</span></a></li>
@@ -73,7 +73,8 @@
         // Set active menu based on current URL
         const currentFile = window.location.pathname.split('/').pop() || 'dashboard.html';
         document.querySelectorAll('.sidebar-menu a').forEach(a => {
-            if (a.getAttribute('href') === currentFile) {
+            const href = a.getAttribute('href');
+            if (href && href.includes(currentFile)) {
                 a.parentElement.classList.add('active');
             }
         });
