@@ -1,10 +1,17 @@
-document.addEventListener('DOMContentLoaded', async () => {
+function bootSekretariatPage() {
     if (!window.HAZANA_USER) {
         window.addEventListener('hazana:user-ready', initSekretariat);
     } else {
         initSekretariat();
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootSekretariatPage);
+} else {
+    bootSekretariatPage();
+}
+window.addEventListener('hazana:pjax-loaded', bootSekretariatPage);
 
 async function initSekretariat() {
     const user = window.HAZANA_USER;

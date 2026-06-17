@@ -3,7 +3,7 @@
  * Fokus: Manajemen Akun Pengguna (Sekretariat & Lembaga)
  */
 
-document.addEventListener('DOMContentLoaded', async () => {
+function bootAdminPage() {
     if (!window.HAZANA_USER) {
         window.addEventListener('hazana:user-ready', initAdmin);
     } else {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabSekretariat.style.borderBottom = '3px solid var(--primary)';
             
             tabLembaga.classList.remove('active');
-            tabLembaga.style.color = 'var(--text-muted)';
+            tabLembaga.style.color = '#64748b';
             tabLembaga.style.borderBottom = 'none';
 
             contentSekretariat.style.display = 'block';
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabLembaga.style.borderBottom = '3px solid var(--primary)';
             
             tabSekretariat.classList.remove('active');
-            tabSekretariat.style.color = 'var(--text-muted)';
+            tabSekretariat.style.color = '#64748b';
             tabSekretariat.style.borderBottom = 'none';
 
             contentLembaga.style.display = 'block';
@@ -46,14 +46,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Fallback UI test data if not logged in
     setTimeout(() => {
-        if (!document.getElementById('user-name').textContent || document.getElementById('user-name').textContent === 'Memuat...') {
+        if (document.getElementById('user-name') && (!document.getElementById('user-name').textContent || document.getElementById('user-name').textContent === 'Memuat...')) {
             document.getElementById('user-name').textContent = 'Admin (Test)';
             document.getElementById('user-role').textContent = 'SUPER_ADMIN';
             renderMockSekretariat();
             renderMockLembaga();
         }
     }, 1000);
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootAdminPage);
+} else {
+    bootAdminPage();
+}
+window.addEventListener('hazana:pjax-loaded', bootAdminPage);
 
 async function initAdmin() {
     const user = window.HAZANA_USER;

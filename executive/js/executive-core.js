@@ -2,7 +2,7 @@
  * Core JS untuk Admin Dashboard HAZANA BETA
  */
 
-document.addEventListener('DOMContentLoaded', async () => {
+function bootExecutivePage() {
     // Pastikan user sudah diload oleh auth.js
     if (!window.HAZANA_USER) {
         // Coba tunggu sebentar
@@ -10,7 +10,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         initAdmin();
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootExecutivePage);
+} else {
+    bootExecutivePage();
+}
+window.addEventListener('hazana:pjax-loaded', bootExecutivePage);
 
 async function initAdmin() {
     const user = window.HAZANA_USER;

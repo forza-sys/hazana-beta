@@ -1,6 +1,6 @@
 let allLembagaData = [];
 
-document.addEventListener('DOMContentLoaded', async () => {
+function bootLembagaPage() {
     if (!window.HAZANA_USER) {
         window.addEventListener('hazana:user-ready', initLembaga);
     } else {
@@ -16,7 +16,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         );
         renderLembagaTable(filtered);
     });
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootLembagaPage);
+} else {
+    bootLembagaPage();
+}
+window.addEventListener('hazana:pjax-loaded', bootLembagaPage);
 
 async function initLembaga() {
     const user = window.HAZANA_USER;

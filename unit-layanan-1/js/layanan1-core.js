@@ -16,10 +16,9 @@ function formatRupiah(number) {
     return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if user is logged in
-    window.addEventListener('hazana:user-ready', (e) => {
-        const user = e.detail;
+function bootLayanan1Page() {
+    function init() {
+        const user = window.HAZANA_USER || { nama_lengkap: 'Admin Layanan 1 (Test)', email: 'test@example.com' };
         
         // Update user profile info in navbar
         const nameEl = document.getElementById('user-name');
@@ -29,21 +28,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         initDashboard();
         initIuranTable();
-    });
+    }
 
-    // If HazanaAuth isn't used or bypass is needed for testing
-    if (typeof HazanaAuth === 'undefined' || !window.HAZANA_USER) {
+    if (!window.HAZANA_USER) {
+        window.addEventListener('hazana:user-ready', init);
+        
         // Fallback for UI testing without login
         setTimeout(() => {
-            if (!document.getElementById('user-name').textContent || document.getElementById('user-name').textContent === 'Loading...') {
-                document.getElementById('user-name').textContent = 'Admin Layanan 1 (Test)';
-                document.getElementById('user-role').textContent = 'UNIT_LAYANAN_1';
-                initDashboard();
-                initIuranTable();
+            if (!window.HAZANA_USER && document.getElementById('user-name') && (!document.getElementById('user-name').textContent || document.getElementById('user-name').textContent === 'Loading...')) {
+                init();
             }
         }, 1000);
+    } else {
+        init();
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootLayanan1Page);
+} else {
+    bootLayanan1Page();
+}
+window.addEventListener('hazana:pjax-loaded', bootLayanan1Page);
 
 function initDashboard() {
     const tbody = document.getElementById('recent-payments-body');
