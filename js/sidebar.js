@@ -50,7 +50,6 @@
             </div>
             <aside class="sidebar collapsed">
                 <div class="sidebar-logo">
-                    <button id="desktop-menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
                     <div class="logo-icon"><i class="fas fa-cube"></i></div>
                     <span style="display: flex; flex-direction: column; justify-content: center;">
                         HAZANA
@@ -83,27 +82,8 @@
 
     function initSidebarEvents() {
         const sidebar = document.querySelector('.sidebar');
-        const desktopBtn = document.getElementById('desktop-menu-btn');
         const mobileBtn = document.getElementById('mobile-menu-btn');
-        
-        const savedState = localStorage.getItem('sidebarState');
-        if (savedState === 'expanded' && window.innerWidth > 768) {
-            sidebar.classList.remove('collapsed');
-            updateMainContentState();
-        }
-
-        if (desktopBtn && mobileBtn && sidebar) {
-            desktopBtn.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    sidebar.classList.remove('open');
-                } else {
-                    sidebar.classList.toggle('collapsed');
-                    updateMainContentState();
-                    const isCollapsed = sidebar.classList.contains('collapsed');
-                    localStorage.setItem('sidebarState', isCollapsed ? 'collapsed' : 'expanded');
-                }
-            });
-
+        if (mobileBtn && sidebar) {
             mobileBtn.addEventListener('click', () => {
                 sidebar.classList.toggle('open');
             });
