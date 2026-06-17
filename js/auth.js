@@ -49,8 +49,8 @@ const HazanaAuth = {
             return { success: false, error: 'Akun Anda sedang dinonaktifkan.' };
         }
 
-        // 3. BLOKIR JIKA BUKAN ANGGOTA FOZ
-        if (profile.master_lembaga && profile.master_lembaga.is_foz_member === false) {
+        // 3. BLOKIR JIKA BUKAN ANGGOTA FOZ (Kecuali Super Admin)
+        if (profile.role !== 'SUPER_ADMIN' && profile.master_lembaga && profile.master_lembaga.is_foz_member === false) {
             await supabaseClient.auth.signOut();
             return { success: false, error: 'Akses ditolak. Lembaga Anda terdaftar, namun belum berstatus Anggota FOZ.' };
         }
@@ -95,8 +95,8 @@ const HazanaAuth = {
         const profile = await this._fetchProfileWithMembership(session.user.id);
         if (!profile) return null;
 
-        // Validasi lagi jika tiba-tiba status keanggotaan dicabut saat sesi masih aktif
-        if (profile.master_lembaga && profile.master_lembaga.is_foz_member === false) {
+        // Validasi lagi jika tiba-tiba status keanggotaan dicabut saat sesi masih aktif (Kecuali Super Admin)
+        if (profile.role !== 'SUPER_ADMIN' && profile.master_lembaga && profile.master_lembaga.is_foz_member === false) {
             await this.logout();
             return null;
         }
