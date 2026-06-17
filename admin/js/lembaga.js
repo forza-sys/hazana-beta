@@ -29,7 +29,7 @@ async function loadLembagaData() {
         if (error) {
             console.error("Error fetching lembaga:", error);
             if(error.code === '42P01') {
-                document.getElementById('lembaga-table-body').innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 2rem;">Tabel master_lembaga belum dibuat di Supabase. Silakan eksekusi SQL script.</td></tr>`;
+                document.getElementById('lembaga-table-body').innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem;">Tabel master_lembaga belum dibuat di Supabase. Silakan eksekusi SQL script.</td></tr>`;
                 return;
             }
             throw error;
@@ -46,14 +46,14 @@ async function loadLembagaData() {
         renderLembagaTable(data);
     } catch (e) {
         console.error("Gagal load lembaga:", e);
-        document.getElementById('lembaga-table-body').innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 2rem; color: red;">Gagal memuat data lembaga.</td></tr>`;
+        document.getElementById('lembaga-table-body').innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: red;">Gagal memuat data lembaga.</td></tr>`;
     }
 }
 
 function renderLembagaTable(data) {
     const tbody = document.getElementById('lembaga-table-body');
     if (!data || data.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 2rem;">Belum ada data lembaga terdaftar.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem;">Belum ada data lembaga terdaftar.</td></tr>`;
         return;
     }
     
@@ -62,6 +62,7 @@ function renderLembagaTable(data) {
             <td>
                 <div style="font-weight: 700; color: var(--text-main);">${item.nama_lembaga}</div>
             </td>
+            <td><span class="badge" style="background: #f1f5f9; color: #475569;">${item.jenis_lembaga || '-'}</span></td>
             <td><span class="badge" style="background: #e0f2fe; color: #0369a1;">${item.tipe_lembaga || '-'}</span></td>
             <td>
                 ${item.is_foz_member 
@@ -100,6 +101,7 @@ async function editLembaga(id) {
         
         document.getElementById('lembaga-id').value = data.lembaga_id;
         document.getElementById('nama_lembaga').value = data.nama_lembaga;
+        document.getElementById('jenis_lembaga').value = data.jenis_lembaga || '';
         document.getElementById('tipe_lembaga').value = data.tipe_lembaga || 'LAZNAS';
         
         document.getElementById('modal-title').textContent = 'Edit Data Lembaga';
@@ -119,6 +121,7 @@ async function saveLembaga(e) {
     const id = document.getElementById('lembaga-id').value;
     const payload = {
         nama_lembaga: document.getElementById('nama_lembaga').value,
+        jenis_lembaga: document.getElementById('jenis_lembaga').value,
         tipe_lembaga: document.getElementById('tipe_lembaga').value,
         is_foz_member: false
     };
@@ -148,7 +151,7 @@ async function deleteLembaga(id) {
     if (!confirm("Apakah Anda yakin ingin menghapus lembaga ini?")) return;
     
     try {
-        const { error } = await supabaseClient.from('lembaga_zakat').delete().eq('id', id);
+        const { error } = await supabaseClient.from('master_lembaga').delete().eq('lembaga_id', id);
         if (error) throw error;
         await loadLembagaData();
     } catch (e) {

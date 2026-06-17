@@ -9,6 +9,7 @@ CREATE TABLE master_lembaga (
     lembaga_id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
     nama_lembaga TEXT NOT NULL,
     nama_singkat TEXT, -- Contoh: "DD", "RZ" (Digunakan untuk Search UI)
+    jenis_lembaga TEXT CHECK (jenis_lembaga IN ('BAZ', 'LAZ', 'UPZ', 'MPZ', 'NON_OPZ')),
     kategori_institusi TEXT DEFAULT 'ZISWAF' CHECK (kategori_institusi IN ('ZISWAF', 'NON_PROFIT')),
     tipe_lembaga TEXT CHECK (tipe_lembaga IN ('LAZNAS', 'LAZPROV', 'LAZKAB', 'UPZ', 'BAZNAS_PUSAT', 'BAZNAS_PROV', 'BAZNAS_KABKOTA')) NOT NULL,
     sk_kemenag TEXT, -- Nomor SK Kemenag
