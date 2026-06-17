@@ -54,7 +54,6 @@
                     <div class="logo-icon"><i class="fas fa-cube"></i></div>
                     <span style="display: flex; flex-direction: column; justify-content: center;">
                         HAZANA
-                        <small style="font-size: 0.6rem; font-weight: 500; letter-spacing: 0.5px; opacity: 0.9; margin-top: -2px;">ERP System</small>
                     </span>
                 </div>
                 ${menuHTML}
