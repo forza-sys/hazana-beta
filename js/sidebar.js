@@ -1,9 +1,40 @@
 // sidebar.js untuk ERP (Admin / Executive)
 (function() {
-    function renderSidebar() {
+    // 1. Inject skeleton immediately so sidebar never "disappears"
+    function injectSkeleton() {
+        const container = document.getElementById('sidebar-container');
+        if (!container || container.dataset.injected) return;
+        
+        container.dataset.injected = 'true';
+        container.innerHTML = `
+            <div class="mobile-header">
+                <button id="mobile-menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="mobile-logo">HAZANA</div>
+            </div>
+            <aside class="sidebar collapsed" id="main-sidebar">
+                <div class="sidebar-logo">
+                    <button id="desktop-menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
+                    <div class="logo-icon"><i class="fas fa-cube"></i></div>
+                    <span style="display: flex; flex-direction: column; justify-content: center;">
+                        HAZANA
+                    </span>
+                </div>
+                <div id="sidebar-menu-container"></div>
+                <div style="flex-grow: 1;"></div>
+                <ul class="sidebar-menu" style="margin-bottom: 1.5rem;">
+                    <li><a href="#" onclick="HazanaAuth.logout()"><i class="fas fa-sign-out-alt"></i> <span>Keluar</span></a></li>
+                </ul>
+            </aside>
+        `;
+        
+        // Setup events immediately on the skeleton
+        initSidebarEvents();
+    }
+
+    function renderMenu() {
         const user = window.HAZANA_USER;
         if (!user) {
-            setTimeout(renderSidebar, 100);
+            setTimeout(renderMenu, 100);
             return;
         }
 
@@ -43,31 +74,9 @@
             `;
         }
 
-        const sidebarHTML = `
-            <div class="mobile-header">
-                <button id="mobile-menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
-                <div class="mobile-logo">HAZANA</div>
-            </div>
-            <aside class="sidebar collapsed">
-                <div class="sidebar-logo">
-                    <button id="desktop-menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
-                    <div class="logo-icon"><i class="fas fa-cube"></i></div>
-                    <span style="display: flex; flex-direction: column; justify-content: center;">
-                        HAZANA
-                    </span>
-                </div>
-                ${menuHTML}
-                
-                <div style="flex-grow: 1;"></div>
-                <ul class="sidebar-menu" style="margin-bottom: 1.5rem;">
-                    <li><a href="#" onclick="HazanaAuth.logout()"><i class="fas fa-sign-out-alt"></i> <span>Keluar</span></a></li>
-                </ul>
-            </aside>
-        `;
-
-        const container = document.getElementById('sidebar-container');
-        if (container) {
-            container.innerHTML = sidebarHTML;
+        const menuContainer = document.getElementById('sidebar-menu-container');
+        if (menuContainer) {
+            menuContainer.innerHTML = menuHTML;
         }
 
         // Set active menu based on current URL
@@ -78,12 +87,10 @@
                 a.parentElement.classList.add('active');
             }
         });
-
-        initSidebarEvents();
     }
 
     function initSidebarEvents() {
-        const sidebar = document.querySelector('.sidebar');
+        const sidebar = document.getElementById('main-sidebar');
         const desktopBtn = document.getElementById('desktop-menu-btn');
         const mobileBtn = document.getElementById('mobile-menu-btn');
         
@@ -113,7 +120,7 @@
 
     function updateMainContentState() {
         const activeMc = document.querySelector('.main-content');
-        const sidebar = document.querySelector('.sidebar');
+        const sidebar = document.getElementById('main-sidebar');
         if (activeMc && sidebar) {
             if (sidebar.classList.contains('collapsed')) {
                 activeMc.classList.add('expanded');
@@ -123,8 +130,11 @@
         }
     }
 
+    // Inject skeleton synchronously if possible
+    injectSkeleton();
+
     document.addEventListener('DOMContentLoaded', () => {
-        // Render will wait for HAZANA_USER
-        renderSidebar();
+        injectSkeleton(); // In case container wasn't ready earlier
+        renderMenu();
     });
 })();
