@@ -13,6 +13,11 @@ const HazanaAuth = {
         'EXECUTIVE_FOZ': 'executive/dashboard.html',
         'ANGGOTA_FOZ': 'member/dashboard.html',
         'UNIT_LAYANAN_1': 'unit-layanan-1/iuran-anggota.html',
+        'UNIT_LAYANAN_2': 'sekretariat/dashboard.html',
+        'PENGURUS': 'sekretariat/dashboard.html',
+        'PENGURUS_HARIAN': 'sekretariat/dashboard.html',
+        'BIDANG': 'sekretariat/dashboard.html',
+        'DIREKTUR_EKSEKUTIF': 'sekretariat/dashboard.html',
         'GUEST': 'index.html'
     },
 
