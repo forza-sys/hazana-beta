@@ -86,12 +86,12 @@ function renderLembagaTable(data) {
             <td><span class="badge" style="background: #e0f2fe; color: #0369a1;">${item.tipe_lembaga || '-'}</span></td>
             <td>
                 ${item.is_foz_member 
-                    ? '<span class="badge badge-success"><i class="fas fa-check-circle" style="margin-right: 4px;"></i> Anggota FOZ</span>' 
+                    ? '<span class="badge badge-success"><i class="fas fa-check-circle" style="margin-right: 4px;"></i> Anggota</span>' 
                     : '<span class="badge badge-warning"><i class="fas fa-clock" style="margin-right: 4px;"></i> Belum Anggota</span>'}
             </td>
             <td>
-                <button class="btn btn-sm" onclick="editLembaga('${item.lembaga_id}')" style="margin-right: 0.5rem;"><i class="fas fa-edit"></i> Edit</button>
-                <button class="btn btn-sm" onclick="deleteLembaga('${item.lembaga_id}')" style="color: var(--danger); border-color: #fca5a5;"><i class="fas fa-trash"></i></button>
+                <button class="btn btn-sm" onclick="editLembaga('${item.lembaga_id}')" style="margin-right: 0.5rem;" title="Edit"><i class="fas fa-edit"></i></button>
+                <button class="btn btn-sm" onclick="deleteLembaga('${item.lembaga_id}')" style="color: var(--danger); border-color: #fca5a5;" title="Hapus"><i class="fas fa-trash"></i></button>
             </td>
         </tr>
     `).join('');
@@ -123,6 +123,7 @@ async function editLembaga(id) {
         document.getElementById('nama_lembaga').value = data.nama_lembaga;
         document.getElementById('jenis_lembaga').value = data.jenis_lembaga || '';
         document.getElementById('tipe_lembaga').value = data.tipe_lembaga || 'Nasional';
+        document.getElementById('is_foz_member').value = data.is_foz_member ? 'true' : 'false';
         
         document.getElementById('modal-title').textContent = 'Edit Data Lembaga';
         document.getElementById('lembaga-modal').classList.add('active');
@@ -143,12 +144,11 @@ async function saveLembaga(e) {
         nama_lembaga: document.getElementById('nama_lembaga').value,
         jenis_lembaga: document.getElementById('jenis_lembaga').value,
         tipe_lembaga: document.getElementById('tipe_lembaga').value,
-        is_foz_member: false
+        is_foz_member: document.getElementById('is_foz_member').value === 'true'
     };
     
     try {
         if (id) {
-            delete payload.is_foz_member; // Jangan timpa status anggota saat edit nama/tipe
             const { error } = await supabaseClient.from('master_lembaga').update(payload).eq('lembaga_id', id);
             if (error) throw error;
         } else {
