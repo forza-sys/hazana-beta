@@ -7,13 +7,29 @@
             return;
         }
 
+        const isSubFolder = window.location.pathname.split('/').some(p => ['admin', 'member', 'sekretariat', 'executive', 'unit-layanan-1'].includes(p));
+        const base = isSubFolder ? '../' : './';
+
         let menuHTML = '';
         if (user.role === 'ADMIN_FOZ') {
             menuHTML = `
-                <div class="menu-label">MANAJEMEN IT</div>
+                <div class="menu-label">MANAJEMEN IT (SUPER ADMIN)</div>
                 <ul class="sidebar-menu">
-                    <li><a href="dashboard.html"><i class="fas fa-users-cog"></i> <span>Verifikasi Akun</span></a></li>
-                    <li><a href="lembaga.html"><i class="fas fa-building"></i> <span>Database Lembaga</span></a></li>
+                    <li><a href="${base}admin/dashboard.html"><i class="fas fa-users-cog"></i> <span>Verifikasi Akun</span></a></li>
+                    <li><a href="${base}admin/lembaga.html"><i class="fas fa-building"></i> <span>Database Lembaga</span></a></li>
+                </ul>
+                <div class="menu-label">SEKRETARIAT FOZ</div>
+                <ul class="sidebar-menu">
+                    <li><a href="${base}sekretariat/dashboard.html"><i class="fas fa-id-card"></i> <span>Data Keanggotaan</span></a></li>
+                </ul>
+                <div class="menu-label">UNIT LAYANAN 1</div>
+                <ul class="sidebar-menu">
+                    <li><a href="${base}unit-layanan-1/iuran-anggota.html"><i class="fas fa-file-invoice-dollar"></i> <span>Iuran Anggota</span></a></li>
+                </ul>
+                <div class="menu-label">TIM EKSEKUTIF</div>
+                <ul class="sidebar-menu">
+                    <li><a href="${base}executive/dashboard.html"><i class="fas fa-chart-line"></i> <span>Dashboard ZIS</span></a></li>
+                    <li><a href="${base}executive/data-karantina.html"><i class="fas fa-shield-virus"></i> <span>Karantina Data</span></a></li>
                 </ul>
             `;
         } else if (user.role === 'TIM_SEKRETARIAT') {
