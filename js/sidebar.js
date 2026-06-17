@@ -27,8 +27,7 @@
             menuHTML = `
                 <div class="menu-label">UNIT LAYANAN 1</div>
                 <ul class="sidebar-menu">
-                    <li><a href="dashboard.html"><i class="fas fa-money-check-alt"></i> <span>Dasbor Iuran</span></a></li>
-                    <li><a href="iuran.html"><i class="fas fa-file-invoice-dollar"></i> <span>Manajemen Iuran</span></a></li>
+                    <li><a href="iuran-anggota.html"><i class="fas fa-file-invoice-dollar"></i> <span>Iuran Anggota</span></a></li>
                 </ul>
             `;
         } else {

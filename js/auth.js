@@ -12,7 +12,7 @@ const HazanaAuth = {
         'TIM_SEKRETARIAT': 'sekretariat/dashboard.html',
         'EXECUTIVE_FOZ': 'executive/dashboard.html',
         'ANGGOTA_FOZ': 'member/dashboard.html',
-        'UNIT_LAYANAN_1': 'layanan-1/dashboard.html',
+        'UNIT_LAYANAN_1': 'unit-layanan-1/iuran-anggota.html',
         'GUEST': 'index.html'
     },
 
@@ -129,7 +129,7 @@ const HazanaAuth = {
 
     getRedirectPath(role) {
         const isSubFolder = window.location.pathname.split('/').some(p =>
-            ['admin', 'member', 'sekretariat', 'executive', 'layanan-1'].includes(p)
+            ['admin', 'member', 'sekretariat', 'executive', 'unit-layanan-1'].includes(p)
         );
         const base = isSubFolder ? '../' : './';
         return base + (this.ROLE_PATHS[role] || 'index.html');
@@ -137,7 +137,7 @@ const HazanaAuth = {
 
     _redirectToLogin() {
         const isSubFolder = window.location.pathname.split('/').some(p =>
-            ['admin', 'member', 'sekretariat', 'executive', 'layanan-1'].includes(p)
+            ['admin', 'member', 'sekretariat', 'executive', 'unit-layanan-1'].includes(p)
         );
         window.location.href = isSubFolder ? '../login.html' : 'login.html';
     },
