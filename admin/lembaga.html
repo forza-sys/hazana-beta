@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Lembaga - HAZANA ERP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/erp.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-config.js"></script>
+    <style>
+        .modal {
+            display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center;
+        }
+        .modal.active { display: flex; }
+        .modal-content {
+            background-color: #fff; padding: 2rem; border-radius: 20px; width: 100%; max-width: 500px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .modal-header h2 { font-size: 1.25rem; font-weight: 700; }
+        .close-modal { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted); }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.85rem; }
+        .form-control { width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 12px; font-family: inherit; }
+        .form-actions { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content expanded">
+            <div class="app-container">
+                
+                <!-- Top Navigation -->
+                <nav class="top-nav">
+                    <div class="page-title">
+                        <h1>Database Lembaga Zakat</h1>
+                        <p>Kelola data master lembaga amil zakat seluruh Indonesia.</p>
+                    </div>
+                    <div class="user-actions">
+                        <div class="user-profile">
+                            <div class="user-avatar"><i class="fas fa-user-shield"></i></div>
+                            <div class="user-info">
+                                <span class="name" id="user-name">Loading...</span>
+                                <span class="email" id="user-role">...</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Stats Grid -->
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Total Lembaga Terdata</div>
+                        <div class="card-value" id="stat-total-lembaga">0</div>
+                        <i class="fas fa-building card-icon"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Anggota FOZ</div>
+                        <div class="card-value" id="stat-anggota-foz" style="color: var(--success);">0</div>
+                        <i class="fas fa-id-badge card-icon"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Belum Anggota</div>
+                        <div class="card-value" id="stat-non-anggota" style="color: var(--text-muted);">0</div>
+                        <i class="fas fa-user-clock card-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>Daftar Lembaga Zakat</h3>
+                        <button class="btn btn-primary" onclick="openLembagaModal()"><i class="fas fa-plus"></i> Tambah Lembaga</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NAMA LEMBAGA & SK</th>
+                                <th>TINGKAT</th>
+                                <th>WILAYAH KERJA</th>
+                                <th>STATUS FOZ</th>
+                                <th>AKSI</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lembaga-table-body">
+                            <tr>
+                                <td colspan="5" style="text-align: center; padding: 2rem;">Memuat data lembaga...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Form Tambah/Edit -->
+    <div id="lembaga-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Tambah Lembaga Baru</h2>
+                <button class="close-modal" onclick="closeLembagaModal()">&times;</button>
+            </div>
+            <form id="lembaga-form" onsubmit="saveLembaga(event)">
+                <input type="hidden" id="lembaga-id">
+                <div class="form-group">
+                    <label>Nama Lembaga</label>
+                    <input type="text" id="nama_lembaga" class="form-control" required placeholder="Contoh: LAZISMU">
+                </div>
+                <div class="form-group">
+                    <label>Nomor SK Kemenag</label>
+                    <input type="text" id="sk_kemenag" class="form-control" placeholder="Opsional">
+                </div>
+                <div class="form-group">
+                    <label>Tingkat</label>
+                    <select id="tingkat" class="form-control" required>
+                        <option value="">-- Pilih Tingkat --</option>
+                        <option value="Nasional">Nasional</option>
+                        <option value="Provinsi">Provinsi</option>
+                        <option value="Kabupaten/Kota">Kabupaten/Kota</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Provinsi</label>
+                    <input type="text" id="provinsi" class="form-control" required placeholder="Contoh: Jawa Barat">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn" onclick="closeLembagaModal()">Batal</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save">Simpan Data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="js/lembaga.js"></script>
+</body>
+</html>

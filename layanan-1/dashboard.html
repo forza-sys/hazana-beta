@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Layanan 1 - HAZANA ERP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/erp.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content expanded">
+            <div class="app-container">
+                
+                <!-- Top Navigation -->
+                <nav class="top-nav">
+                    <div class="page-title">
+                        <h1>Dasbor Iuran Anggota</h1>
+                        <p>Ringkasan penerimaan iuran tahunan dari anggota Forum Zakat.</p>
+                    </div>
+                    <div class="user-actions">
+                        <div class="user-profile">
+                            <div class="user-avatar"><i class="fas fa-money-check-alt"></i></div>
+                            <div class="user-info">
+                                <span class="name" id="user-name">Loading...</span>
+                                <span class="email" id="user-role">...</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Stats Grid -->
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Total Target Iuran 2026</div>
+                        <div class="card-value" id="stat-target">Rp 1.500.000.000</div>
+                        <i class="fas fa-bullseye card-icon"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Iuran Terkumpul</div>
+                        <div class="card-value" id="stat-terkumpul" style="color: var(--success);">Rp 950.000.000</div>
+                        <i class="fas fa-chart-line card-icon"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Tagihan Menunggak</div>
+                        <div class="card-value" id="stat-menunggak" style="color: var(--danger);">12 Lembaga</div>
+                        <i class="fas fa-exclamation-triangle card-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Recent Payments Table -->
+                <div class="table-container" style="margin-top: 2rem;">
+                    <div class="table-header">
+                        <h3>Pembayaran Iuran Terbaru</h3>
+                        <a href="iuran.html" class="btn btn-outline btn-sm">Lihat Semua</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>TANGGAL</th>
+                                <th>LEMBAGA</th>
+                                <th>NOMINAL</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-payments-body">
+                            <tr>
+                                <td colspan="4" style="text-align: center; padding: 2rem;">Memuat data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="js/layanan1-core.js"></script>
+</body>
+</html>

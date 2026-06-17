@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard (IT) - HAZANA ERP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/erp.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content expanded">
+            <div class="app-container">
+                
+                <!-- Top Navigation -->
+                <nav class="top-nav">
+                    <div class="page-title">
+                        <h1>Manajemen Akun Pengguna</h1>
+                        <p>Verifikasi pendaftar baru, atur akses (Role), dan pantau aktivitas log masuk sistem HAZANA.</p>
+                    </div>
+                    <div class="user-actions">
+                        <div class="user-profile">
+                            <div class="user-avatar"><i class="fas fa-user-shield"></i></div>
+                            <div class="user-info">
+                                <span class="name" id="user-name">Memuat...</span>
+                                <span class="email" id="user-role">Administrator IT</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Stats Grid -->
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Total Pengguna Terdaftar</div>
+                        <div class="card-value" id="stat-total-users">...</div>
+                        <i class="fas fa-users card-icon"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Menunggu Verifikasi</div>
+                        <div class="card-value" style="color: var(--danger);" id="stat-pending">...</div>
+                        <i class="fas fa-user-clock card-icon" style="color: var(--danger);"></i>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Tim Eksekutor Aktif</div>
+                        <div class="card-value" style="color: var(--success);" id="stat-exec">...</div>
+                        <i class="fas fa-user-tie card-icon" style="color: var(--success);"></i>
+                    </div>
+                </div>
+
+                <!-- User Table -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>Daftar Pendaftar Baru</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nama Lengkap & ID</th>
+                                <th>Lembaga</th>
+                                <th>Role Saat Ini</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-table-body">
+                            <tr>
+                                <td colspan="4" style="text-align: center; padding: 2rem;">Memuat data pengguna...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="js/admin-core.js"></script>
+</body>
+</html>
