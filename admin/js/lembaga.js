@@ -122,7 +122,7 @@ async function editLembaga(id) {
         document.getElementById('lembaga-id').value = data.lembaga_id;
         document.getElementById('nama_lembaga').value = data.nama_lembaga;
         document.getElementById('jenis_lembaga').value = data.jenis_lembaga || '';
-        document.getElementById('tipe_lembaga').value = data.tipe_lembaga || 'LAZNAS';
+        document.getElementById('tipe_lembaga').value = data.tipe_lembaga || 'Nasional';
         
         document.getElementById('modal-title').textContent = 'Edit Data Lembaga';
         document.getElementById('lembaga-modal').classList.add('active');

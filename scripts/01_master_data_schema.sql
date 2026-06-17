@@ -11,7 +11,7 @@ CREATE TABLE master_lembaga (
     nama_singkat TEXT, -- Contoh: "DD", "RZ" (Digunakan untuk Search UI)
     jenis_lembaga TEXT CHECK (jenis_lembaga IN ('BAZ', 'LAZ', 'UPZ', 'MPZ', 'NON_OPZ')),
     kategori_institusi TEXT DEFAULT 'ZISWAF' CHECK (kategori_institusi IN ('ZISWAF', 'NON_PROFIT')),
-    tipe_lembaga TEXT CHECK (tipe_lembaga IN ('LAZNAS', 'LAZPROV', 'LAZKAB', 'UPZ', 'BAZNAS_PUSAT', 'BAZNAS_PROV', 'BAZNAS_KABKOTA')) NOT NULL,
+    tipe_lembaga TEXT CHECK (tipe_lembaga IN ('Nasional', 'Provinsi', 'Kab/Kota')) NOT NULL,
     sk_kemenag TEXT, -- Nomor SK Kemenag
     is_foz_member BOOLEAN DEFAULT FALSE, -- Penentu apakah bisa dibuatkan User ID (Akses Login) atau tidak
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
