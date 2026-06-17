@@ -1,9 +1,21 @@
+let allLembagaData = [];
+
 document.addEventListener('DOMContentLoaded', async () => {
     if (!window.HAZANA_USER) {
         window.addEventListener('hazana:user-ready', initLembaga);
     } else {
         initLembaga();
     }
+    
+    // Setup search listener
+    document.getElementById('search-lembaga')?.addEventListener('input', (e) => {
+        const keyword = e.target.value.toLowerCase();
+        const filtered = allLembagaData.filter(item => 
+            item.nama_lembaga.toLowerCase().includes(keyword) || 
+            (item.nama_singkat && item.nama_singkat.toLowerCase().includes(keyword))
+        );
+        renderLembagaTable(filtered);
+    });
 });
 
 async function initLembaga() {
@@ -43,7 +55,15 @@ async function loadLembagaData() {
         document.getElementById('stat-anggota-foz').textContent = anggota;
         document.getElementById('stat-non-anggota').textContent = nonAnggota;
         
-        renderLembagaTable(data);
+        allLembagaData = data; // Store globally for search
+        
+        // Trigger initial render with current search if any
+        const searchInput = document.getElementById('search-lembaga');
+        if (searchInput && searchInput.value) {
+            searchInput.dispatchEvent(new Event('input'));
+        } else {
+            renderLembagaTable(data);
+        }
     } catch (e) {
         console.error("Gagal load lembaga:", e);
         document.getElementById('lembaga-table-body').innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: red;">Gagal memuat data lembaga.</td></tr>`;

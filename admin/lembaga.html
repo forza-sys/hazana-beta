@@ -75,7 +75,10 @@
                 <div class="table-container">
                     <div class="table-header">
                         <h3>Daftar Lembaga</h3>
-                        <button class="btn btn-primary" onclick="openLembagaModal()"><i class="fas fa-plus"></i> Tambah Lembaga</button>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <input type="text" id="search-lembaga" class="form-control" placeholder="Cari nama lembaga..." style="min-width: 250px;">
+                            <button class="btn btn-primary" onclick="openLembagaModal()"><i class="fas fa-plus"></i> Tambah Lembaga</button>
+                        </div>
                     </div>
                     <table>
                         <thead>
