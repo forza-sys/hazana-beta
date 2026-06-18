@@ -68,8 +68,8 @@
             menuHTML = `
                 <div class="menu-label">TIM EKSEKUTIF</div>
                 <ul class="sidebar-menu">
-                    <li><a href="dashboard.html"><i class="fas fa-chart-line"></i> <span>Dashboard ZIS</span></a></li>
-                    <li><a href="data-karantina.html"><i class="fas fa-shield-virus"></i> <span>Karantina Data</span></a></li>
+                    <li><a href="${base}data-zakat/kurban.html"><i class="fas fa-chart-line"></i> <span>Dashboard Data Zakat</span></a></li>
+                    <li><a href="${base}executive/data-karantina.html"><i class="fas fa-shield-virus"></i> <span>Karantina Data</span></a></li>
                 </ul>
             `;
         }
