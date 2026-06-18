@@ -126,6 +126,7 @@
                         newModals.forEach(m => document.body.appendChild(m));
                         
                         document.title = doc.title;
+                        document.body.className = doc.body.className;
                         window.history.pushState({}, '', targetHref);
                         
                         // Execute Scripts outside main content (specifically core JS)

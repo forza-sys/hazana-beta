@@ -21,6 +21,24 @@
   --danger: #ef4444;
   --warning: #f59e0b;
   --success: #10b981;
+  
+  --sidebar-bg: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+body.theme-ul1 {
+  --sidebar-bg: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
+}
+
+body.theme-exec {
+  --sidebar-bg: linear-gradient(135deg, #78350f 0%, #d97706 100%);
+}
+
+body.theme-shield {
+  --sidebar-bg: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
+}
+
+body.theme-admin {
+  --sidebar-bg: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -85,7 +103,7 @@ tr:hover { background-color: #f8fafc; }
   left: 0;
   height: 100vh;
   width: 250px;
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  background: var(--sidebar-bg);
   color: white;
   transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: width, transform;
