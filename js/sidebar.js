@@ -41,8 +41,35 @@
         const isSubFolder = window.location.pathname.split('/').some(p => ['admin', 'member', 'sekretariat', 'executive', 'unit-layanan-1'].includes(p));
         const base = isSubFolder ? '../' : './';
 
+        const path = window.location.pathname;
+
         let menuHTML = '';
-        if (user.role === 'SUPER_ADMIN' || user.role === 'ADMIN_IT') {
+
+        // Determine context based on path
+        if (path.includes('/unit-layanan-1/')) {
+            menuHTML = `
+                <div class="menu-label">UNIT LAYANAN 1</div>
+                <ul class="sidebar-menu">
+                    <li><a href="${base}unit-layanan-1/iuran-anggota.html"><i class="fas fa-file-invoice-dollar"></i> <span>Iuran Anggota</span></a></li>
+                </ul>
+            `;
+        } else if (path.includes('/sekretariat/')) {
+            menuHTML = `
+                <div class="menu-label">SEKRETARIAT FOZ</div>
+                <ul class="sidebar-menu">
+                    <li><a href="${base}sekretariat/dashboard.html"><i class="fas fa-id-card"></i> <span>Data Keanggotaan</span></a></li>
+                </ul>
+            `;
+        } else if (path.includes('/executive/')) {
+             menuHTML = `
+                <div class="menu-label">TIM EKSEKUTIF</div>
+                <ul class="sidebar-menu">
+                    <li><a href="${base}data-zakat/kurban.html"><i class="fas fa-chart-line"></i> <span>Dashboard Data Zakat</span></a></li>
+                    <li><a href="${base}executive/data-karantina.html"><i class="fas fa-shield-virus"></i> <span>Karantina Data</span></a></li>
+                </ul>
+            `;
+        } else {
+            // Default Admin Menu for /admin/
             menuHTML = `
                 <ul class="sidebar-menu">
                     <li><a href="${base}admin/lembaga.html"><i class="fas fa-building"></i> <span>Lembaga</span></a></li>
@@ -50,27 +77,16 @@
                     <li><a href="${base}admin/portal.html"><i class="fas fa-th-large"></i> <span>Modul</span></a></li>
                 </ul>
             `;
-        } else if (user.role === 'TIM_SEKRETARIAT') {
-            menuHTML = `
-                <div class="menu-label">SEKRETARIAT FOZ</div>
-                <ul class="sidebar-menu">
-                    <li><a href="dashboard.html"><i class="fas fa-id-card"></i> <span>Data Keanggotaan</span></a></li>
-                </ul>
-            `;
-        } else if (user.role === 'UNIT_LAYANAN_1') {
-            menuHTML = `
-                <div class="menu-label">UNIT LAYANAN 1</div>
-                <ul class="sidebar-menu">
-                    <li><a href="iuran-anggota.html"><i class="fas fa-file-invoice-dollar"></i> <span>Iuran Anggota</span></a></li>
-                </ul>
-            `;
-        } else {
-            menuHTML = `
-                <div class="menu-label">TIM EKSEKUTIF</div>
-                <ul class="sidebar-menu">
-                    <li><a href="${base}data-zakat/kurban.html"><i class="fas fa-chart-line"></i> <span>Dashboard Data Zakat</span></a></li>
-                    <li><a href="${base}executive/data-karantina.html"><i class="fas fa-shield-virus"></i> <span>Karantina Data</span></a></li>
-                </ul>
+        }
+
+        // Add back to portal link if in a submodule
+        if (!path.includes('/admin/')) {
+            menuHTML += `
+                <div style="margin-top: 2rem; padding: 0 1.5rem;">
+                    <a href="${base}admin/portal.html" style="color: var(--text-light); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s;">
+                        <i class="fas fa-arrow-left"></i> Kembali ke Portal
+                    </a>
+                </div>
             `;
         }
 
