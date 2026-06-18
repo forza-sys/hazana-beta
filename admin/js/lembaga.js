@@ -77,7 +77,7 @@ async function loadLembagaData() {
         document.getElementById('detail-anggota-foz').innerHTML = `<span>Nasional: <b>${anggotaNasional}</b></span> <span>Provinsi: <b>${anggotaProvinsi}</b></span> <span>Kab/Kota: <b>${anggotaKabKota}</b></span>`;
         
         document.getElementById('stat-non-anggota').textContent = nonAnggotaCount;
-        document.getElementById('detail-non-anggota').innerHTML = `<span>Nasional: <b>${nonAnggotaNasional}</b></span> <span>Provinsi: <b>${nonAnggotaProvinsi}</b></span> <span>Kab/Kota: <b>${nonAnggotaKabKota}</b></span> <span style="display:block;width:100%;font-size:0.7rem;opacity:0.7;margin-top:-4px;">(Khusus LAZ)</span>`;
+        document.getElementById('detail-non-anggota').innerHTML = `<span>Nasional: <b>${nonAnggotaNasional}</b></span> <span>Provinsi: <b>${nonAnggotaProvinsi}</b></span> <span>Kab/Kota: <b>${nonAnggotaKabKota}</b></span>`;
         
         allLembagaData = data; // Store globally for search
         
