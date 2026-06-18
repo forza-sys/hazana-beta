@@ -55,6 +55,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-
 .card-title { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 1rem; }
 .card-value { font-size: 2rem; font-weight: 800; display: flex; align-items: center; flex-grow: 1; }
 .card-icon { position: absolute; right: -10px; bottom: -10px; font-size: 5rem; opacity: 0.05; }
+.card-detail { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: flex; gap: 0.75rem; margin-top: 0.5rem; flex-wrap: wrap; z-index: 1; position: relative; }
 
 /* Tables */
 .table-container { background: var(--bg-card); border-radius: 20px; border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm); }

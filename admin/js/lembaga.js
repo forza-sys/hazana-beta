@@ -55,12 +55,29 @@ async function loadLembagaData() {
         }
         
         let total = data.length;
+        let totalLAZ = data.filter(d => d.jenis_lembaga === 'LAZ').length;
+        let totalBAZ = data.filter(d => d.jenis_lembaga === 'BAZ').length;
+        
         let anggota = data.filter(d => d.is_foz_member).length;
-        let nonAnggota = total - anggota;
+        let anggotaNasional = data.filter(d => d.is_foz_member && d.tipe_lembaga === 'Nasional').length;
+        let anggotaProvinsi = data.filter(d => d.is_foz_member && d.tipe_lembaga === 'Provinsi').length;
+        let anggotaKabKota = data.filter(d => d.is_foz_member && d.tipe_lembaga === 'Kab/Kota').length;
+        
+        // Belum Anggota khusus LAZ
+        let nonAnggotaLAZ = data.filter(d => d.jenis_lembaga === 'LAZ' && !d.is_foz_member);
+        let nonAnggotaCount = nonAnggotaLAZ.length;
+        let nonAnggotaNasional = nonAnggotaLAZ.filter(d => d.tipe_lembaga === 'Nasional').length;
+        let nonAnggotaProvinsi = nonAnggotaLAZ.filter(d => d.tipe_lembaga === 'Provinsi').length;
+        let nonAnggotaKabKota = nonAnggotaLAZ.filter(d => d.tipe_lembaga === 'Kab/Kota').length;
         
         document.getElementById('stat-total-lembaga').textContent = total;
+        document.getElementById('detail-total-lembaga').innerHTML = `<span><i class="fas fa-building" style="color:var(--primary);margin-right:4px;"></i>${totalLAZ} LAZ</span><span><i class="fas fa-landmark" style="color:var(--primary);margin-right:4px;"></i>${totalBAZ} BAZ</span>`;
+        
         document.getElementById('stat-anggota-foz').textContent = anggota;
-        document.getElementById('stat-non-anggota').textContent = nonAnggota;
+        document.getElementById('detail-anggota-foz').innerHTML = `<span>Nasional: <b>${anggotaNasional}</b></span> <span>Provinsi: <b>${anggotaProvinsi}</b></span> <span>Kab/Kota: <b>${anggotaKabKota}</b></span>`;
+        
+        document.getElementById('stat-non-anggota').textContent = nonAnggotaCount;
+        document.getElementById('detail-non-anggota').innerHTML = `<span>Nasional: <b>${nonAnggotaNasional}</b></span> <span>Provinsi: <b>${nonAnggotaProvinsi}</b></span> <span>Kab/Kota: <b>${nonAnggotaKabKota}</b></span> <span style="display:block;width:100%;font-size:0.7rem;opacity:0.7;margin-top:-4px;">(Khusus LAZ)</span>`;
         
         allLembagaData = data; // Store globally for search
         
