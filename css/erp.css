@@ -306,10 +306,9 @@ tr:hover { background-color: #f8fafc; }
 }
 
 .sidebar-menu li.active a {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;
-  font-weight: 800;
-  border-left: 4px solid white;
+  background-color: white;
+  color: var(--primary);
+  font-weight: 700;
 }
 
 /* Main Content */
