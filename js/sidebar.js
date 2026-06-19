@@ -48,7 +48,6 @@
         // Determine context based on path
         if (path.includes('/unit-layanan-1/')) {
             menuHTML = `
-                <div class="menu-label">UNIT LAYANAN 1</div>
                 <ul class="sidebar-menu">
                     <li><a href="${base}unit-layanan-1/iuran-anggota.html"><i class="fas fa-file-invoice-dollar"></i> <span>Iuran Anggota</span></a></li>
                 </ul>
