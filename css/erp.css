@@ -22,22 +22,51 @@
   --warning: #f59e0b;
   --success: #10b981;
   
+  /* Fallback Primary (Admin Blue) */
+  --primary: #1e3a8a; 
+  --primary-light: #eff6ff;
+  --primary-dark: #1e40af;
+  --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
   --sidebar-bg: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
 
 body.theme-ul1 {
+  --primary: #10b981; 
+  --primary-light: #d1fae5;
+  --primary-dark: #059669;
+  --primary-gradient: linear-gradient(135deg, #10b981 0%, #047857 100%);
   --sidebar-bg: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
 }
 
 body.theme-exec {
+  --primary: #f59e0b;
+  --primary-light: #fef3c7;
+  --primary-dark: #d97706;
+  --primary-gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
   --sidebar-bg: linear-gradient(135deg, #78350f 0%, #d97706 100%);
 }
 
+body.theme-sekretariat {
+  --primary: #3b82f6;
+  --primary-light: #eff6ff;
+  --primary-dark: #2563eb;
+  --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  --sidebar-bg: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
 body.theme-shield {
+  --primary: #ef4444;
+  --primary-light: #fee2e2;
+  --primary-dark: #dc2626;
+  --primary-gradient: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
   --sidebar-bg: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
 }
 
 body.theme-admin {
+  --primary: #1e3a8a; 
+  --primary-light: #eff6ff;
+  --primary-dark: #1e40af;
+  --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
   --sidebar-bg: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
 
@@ -277,9 +306,10 @@ tr:hover { background-color: #f8fafc; }
 }
 
 .sidebar-menu li.active a {
-  background-color: white;
-  color: #1e3a8a;
-  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-weight: 800;
+  border-left: 4px solid white;
 }
 
 /* Main Content */
