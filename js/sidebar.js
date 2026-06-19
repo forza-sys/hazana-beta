@@ -78,8 +78,8 @@
             `;
         }
 
-        // Add back to portal link if in a submodule
-        if (!path.includes('/admin/')) {
+        // Add back to portal link if in a submodule and user has access to portal
+        if (!path.includes('/admin/') && (user.role === 'SUPER_ADMIN' || user.role === 'ADMIN_IT')) {
             menuHTML += `
                 <div style="margin-top: 2rem; padding: 0 1.5rem;">
                     <a href="${base}admin/portal.html" style="color: var(--text-light); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s;">
