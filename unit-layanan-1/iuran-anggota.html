@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manajemen Iuran - HAZANA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/erp.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="../js/supabase-config.js"></script>
+    <script src="js/auth-check.js?v=1"></script>
 </head>
 <body class="theme-ul1">
     <div class="dashboard-layout">
@@ -33,35 +35,385 @@
                     </div>
                 </nav>
 
-                <div class="table-container">
-                    <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                        <h3 style="margin: 0;">Status Iuran Anggota 2026</h3>
-                        <div style="display: flex; gap: 1rem;">
-                            <input type="text" id="search-lembaga" placeholder="Cari Lembaga..." style="padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border);">
-                            <select id="filter-status" style="padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border);">
-                                <option value="all">Semua Status</option>
-                                <option value="lunas">Lunas</option>
-                                <option value="menunggak">Menunggak</option>
+                <!-- Tabs Navigation -->
+                <div class="nav-tabs">
+                    <div class="tab-item active" onclick="switchTab('tab-dashboard', this)">Dashboard Iuran</div>
+                    <div class="tab-item" onclick="switchTab('tab-status', this)">Status Pembayaran</div>
+                    <div class="tab-item" onclick="switchTab('tab-komitmen', this)">Komitmen Iuran</div>
+                    <div class="tab-item" onclick="switchTab('tab-ketentuan', this)">Ketentuan Iuran</div>
+                    <div class="tab-item" onclick="switchTab('tab-pic', this)">PIC Keuangan</div>
+                    <div class="tab-item" onclick="switchTab('tab-pimpinan', this)">Pimpinan</div>
+                </div>
+                <div id="tab-dashboard" class="tab-content active">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <h2 style="margin: 0;">Dashboard Iuran</h2>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <select id="dash-filter-bulan" class="filter-bulan form-control" style="width: auto; font-weight: bold; font-size: 1.1rem; padding: 0.5rem 2rem 0.5rem 1rem; border-radius: 8px;" onchange="window.CURRENT_MONTH=this.value; document.querySelectorAll('.filter-bulan').forEach(s=>s.value=this.value); renderTable(); renderDashboard();">
+                                <option value="all">Sepanjang Tahun</option>
+                                <option value="Januari">Januari</option>
+                                <option value="Februari">Februari</option>
+                                <option value="Maret">Maret</option>
+                                <option value="April">April</option>
+                                <option value="Mei">Mei</option>
+                                <option value="Juni">Juni</option>
+                                <option value="Juli">Juli</option>
+                                <option value="Agustus">Agustus</option>
+                                <option value="September">September</option>
+                                <option value="Oktober">Oktober</option>
+                                <option value="November">November</option>
+                                <option value="Desember">Desember</option>
+                            </select>
+                            <select id="dash-filter-tahun" class="filter-tahun form-control" style="width: auto; font-weight: bold; font-size: 1.1rem; padding: 0.5rem 2rem 0.5rem 1rem; border-radius: 8px;" onchange="if(window.changeYear) window.changeYear(this.value);">
+                                <option value="2026">Tahun 2026</option>
+                                <option value="2025">Tahun 2025</option>
+                                <option value="2024">Tahun 2024</option>
+                                <option value="2023">Tahun 2023</option>
+                                <option value="2022">Tahun 2022</option>
                             </select>
                         </div>
                     </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>LEMBAGA</th>
-                                <th>TARGET IURAN</th>
-                                <th>STATUS</th>
-                                <th>AKSI</th>
-                            </tr>
-                        </thead>
-                        <tbody id="iuran-table-body">
-                            <tr>
-                                <td colspan="4" style="text-align: center; padding: 2rem;">Memuat data...</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div class="card">
+                            <div class="card-title">TOTAL KOMITMEN IURAN</div>
+                            <div class="card-value" id="dash-komitmen" style="color: var(--text-main);">Rp 0</div>
+                            <i class="fas fa-file-invoice-dollar card-icon"></i>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">TOTAL TERKUMPUL</div>
+                            <div class="card-value" id="dash-terkumpul" style="color: var(--primary);">Rp 0</div>
+                            <i class="fas fa-hand-holding-usd card-icon"></i>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">SISA TAGIHAN</div>
+                            <div class="card-value" id="dash-sisa" style="color: #ef4444;">Rp 0</div>
+                            <i class="fas fa-exclamation-circle card-icon"></i>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+                        <div class="card">
+                            <div class="card-title">PROGRESS PENGUMPULAN IURAN FOZ</div>
+                            <div style="margin-top: 2rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600;">
+                                    <span>Pencapaian</span>
+                                    <span id="dash-progress-text" style="color: var(--primary);">0%</span>
+                                </div>
+                                <div style="width: 100%; height: 24px; background-color: var(--border-color); border-radius: 12px; overflow: hidden;">
+                                    <div id="dash-progress-bar" style="width: 0%; height: 100%; background-color: var(--primary); transition: width 1s ease-in-out;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">STATUS LEMBAGA</div>
+                            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">
+                                    <span style="font-weight: 500;"><span class="badge badge-success">LUNAS</span></span>
+                                    <strong id="dash-count-lunas" style="font-size: 1.25rem;">0</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="font-weight: 500;"><span class="badge badge-danger">MENUNGGAK</span></span>
+                                    <strong id="dash-count-menunggak" style="font-size: 1.25rem;">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                        <div class="card">
+                            <div class="card-title">PENDAPATAN IURAN PER TAHUN</div>
+                            <div style="margin-top: 1rem; position: relative; height: 300px; width: 100%;">
+                                <canvas id="pendapatanChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">PERSENTASE LEMBAGA IURAN</div>
+                            <div style="margin-top: 1rem; position: relative; height: 300px; width: 100%; display: flex; justify-content: center;">
+                                <canvas id="persentaseChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="margin-top: 1.5rem;">
+                        <div class="card-title">PERSENTASE PEMBAYARAN OPZ</div>
+                        <div class="table-container" style="margin-top: 1rem; max-height: 400px; overflow-y: auto;">
+                            <table id="dashboard-opz-table" style="width: 100%; text-align: left;">
+                                <thead style="position: sticky; top: 0; background: var(--bg-hover); z-index: 10;">
+                                    <tr>
+                                        <th>NAMA LEMBAGA</th>
+                                        <th>TERMIN</th>
+                                        <th>TOTAL KOMITMEN</th>
+                                        <th>TOTAL DIBAYAR</th>
+                                        <th>PERIODE DIBAYAR</th>
+                                        <th>STATUS</th>
+                                        <th>PERSENTASE</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashboard-opz-tbody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
+                <div id="tab-status" class="tab-content" style="display: none;">
+                    <div class="table-container">
+                        <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3 style="margin: 0;">Status Iuran Anggota</h3>
+                            <div style="display: flex; gap: 1rem; align-items: center; justify-content: flex-end;">
+                                <div style="position: relative; flex: 1; min-width: 280px;">
+                                    <i class="fas fa-search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                                    <input type="text" id="search-lembaga" placeholder="Cari nama lembaga..." style="width: 100%; padding: 0.6rem 1rem 0.6rem 2.2rem; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.85rem; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                                </div>
+                                <select class="filter-bulan" style="padding: 0.6rem; border-radius: 8px; font-weight: bold; width: auto; border: 1px solid var(--border-color); outline: none;">
+                                    <option value="all">Sepanjang Tahun</option>
+                                    <option value="Januari">Januari</option>
+                                    <option value="Februari">Februari</option>
+                                    <option value="Maret">Maret</option>
+                                    <option value="April">April</option>
+                                    <option value="Mei">Mei</option>
+                                    <option value="Juni">Juni</option>
+                                    <option value="Juli">Juli</option>
+                                    <option value="Agustus">Agustus</option>
+                                    <option value="September">September</option>
+                                    <option value="Oktober">Oktober</option>
+                                    <option value="November">November</option>
+                                    <option value="Desember">Desember</option>
+                                </select>
+                                <select class="filter-tahun" style="padding: 0.6rem; border-radius: 8px; font-weight: bold; width: auto; border: 1px solid var(--border-color); outline: none;">
+                                    <option value="2026">2026</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                </select>
+                                <select id="filter-status" style="padding: 0.6rem; border-radius: 8px; font-weight: bold; width: auto; border: 1px solid var(--border-color); outline: none;">
+                                    <option value="all">Semua Status</option>
+                                    <option value="lunas">Lunas</option>
+                                    <option value="menunggak">Menunggak</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>NAMA LEMBAGA</th>
+                                    <th>TAHUN</th>
+                                    <th>PERIODE</th>
+                                    <th>NOMINAL</th>
+                                    <th>STATUS PEMBAYARAN</th>
+                                </tr>
+                            </thead>
+                            <tbody id="iuran-table-body">
+                                <tr>
+                                    <td colspan="5" style="text-align: center; padding: 2rem;">Memuat data...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- NEW TAB: Komitmen Iuran -->
+                <div id="tab-komitmen" class="tab-content" style="display: none;">
+                    <!-- Dashboard Cards -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        
+                        <!-- Nilai Komitmen -->
+                        <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3), 0 2px 4px -1px rgba(16, 185, 129, 0.2); color: white; display: flex; flex-direction: column; justify-content: center;">
+                            <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; font-weight: 600; opacity: 0.9;">Total Nilai Komitmen</h4>
+                            <div id="dash-total-komitmen" style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">Rp 0</div>
+                            <div style="font-size: 0.8rem; opacity: 0.85; display: flex; align-items: center; gap: 0.4rem;">
+                                <span>Potensi Iuran Seharusnya:</span>
+                                <strong id="dash-total-potensi">Rp 0</strong>
+                                <span id="dash-potensi-pct" style="font-size: 0.75rem; background: rgba(255,255,255,0.2); padding: 1px 6px; border-radius: 10px; font-weight: 600;">0%</span>
+                            </div>
+                            <div style="margin-top: 0.8rem; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.2); overflow: hidden;">
+                                <div id="dash-bar-potensi" style="height: 100%; background: white; width: 0%; transition: width 0.5s ease;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Kepatuhan Komitmen -->
+                        <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); border: 1px solid var(--border-color);">
+                            <h4 style="margin: 0 0 1rem 0; font-size: 0.95rem; color: var(--text-muted); font-weight: 600;">Status Komitmen (Sesuai Acuan)</h4>
+                            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #10b981;"></div>
+                                        <span style="font-size: 0.85rem; font-weight: 500;">Hijau (≥ 100%)</span>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <span id="dash-green-pct" style="font-weight: 700; color: #10b981;">0%</span>
+                                        <span id="dash-green-count" style="font-size: 0.75rem; color: var(--text-muted); margin-left: 5px;">(0)</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
+                                        <span style="font-size: 0.85rem; font-weight: 500;">Kuning (50-99%)</span>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <span id="dash-yellow-pct" style="font-weight: 700; color: #f59e0b;">0%</span>
+                                        <span id="dash-yellow-count" style="font-size: 0.75rem; color: var(--text-muted); margin-left: 5px;">(0)</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                                        <span style="font-size: 0.85rem; font-weight: 500;">Merah (< 50%)</span>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <span id="dash-red-pct" style="font-weight: 700; color: #ef4444;">0%</span>
+                                        <span id="dash-red-count" style="font-size: 0.75rem; color: var(--text-muted); margin-left: 5px;">(0)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mini Progress Bar -->
+                            <div style="margin-top: 1rem; height: 8px; border-radius: 4px; display: flex; overflow: hidden; background: #f1f5f9;">
+                                <div id="dash-bar-green" style="height: 100%; background: #10b981; width: 0%; transition: width 0.5s ease;"></div>
+                                <div id="dash-bar-yellow" style="height: 100%; background: #f59e0b; width: 0%; transition: width 0.5s ease;"></div>
+                                <div id="dash-bar-red" style="height: 100%; background: #ef4444; width: 0%; transition: width 0.5s ease;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Total Lembaga -->
+                        <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: center;">
+                            <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--text-muted); font-weight: 600;">Total Lembaga</h4>
+                            <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 1rem;">
+                                <span id="dash-total-lembaga" style="font-size: 2.2rem; font-weight: 800; color: var(--text-main);">0</span>
+                                <span style="font-size: 0.9rem; color: var(--text-muted);">Anggota</span>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span style="font-size: 0.7rem; background: #eff6ff; color: #3b82f6; padding: 2px 8px; border-radius: 12px;"><b id="dash-count-nasional">0</b> Nasional</span>
+                                <span style="font-size: 0.7rem; background: #f5f3ff; color: #8b5cf6; padding: 2px 8px; border-radius: 12px;"><b id="dash-count-provinsi">0</b> Provinsi</span>
+                                <span style="font-size: 0.7rem; background: #f0fdfa; color: #14b8a6; padding: 2px 8px; border-radius: 12px;"><b id="dash-count-kabkota">0</b> Kab/Kota</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="table-container">
+                        <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3 style="margin: 0;">Data Komitmen Iuran</h3>
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <select id="filter-skala" style="padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.85rem; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,0.05); color: var(--text-main); background: white;">
+                                    <option value="all">Semua Skala</option>
+                                    <option value="Nasional">Nasional</option>
+                                    <option value="Provinsi">Provinsi</option>
+                                    <option value="Kab/Kota">Kabupaten/Kota</option>
+                                </select>
+                                <select id="filter-komitmen-status" style="padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.85rem; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,0.05); color: var(--text-main); background: white;">
+                                    <option value="all">Semua Status</option>
+                                    <option value="green">🟢 Sesuai Acuan (≥ 100%)</option>
+                                    <option value="yellow">🟡 Sebagian (50% - 99%)</option>
+                                    <option value="red">🔴 Kurang Sekali (&lt; 50%)</option>
+                                </select>
+                                <div style="position: relative; width: 300px;">
+                                    <i class="fas fa-search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                                    <input type="text" id="search-komitmen" placeholder="Cari nama lembaga..." style="width: 100%; padding: 0.6rem 1rem 0.6rem 2.2rem; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.85rem; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                                </div>
+                            </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="sortable" data-sort="nama_lembaga" style="cursor: pointer; user-select: none;">LEMBAGA <i class="fas fa-sort" style="color: var(--text-muted); font-size: 0.8rem; margin-left: 5px;"></i></th>
+                                    <th class="sortable" data-sort="skala_lembaga" style="cursor: pointer; user-select: none;">SKALA <i class="fas fa-sort" style="color: var(--text-muted); font-size: 0.8rem; margin-left: 5px;"></i></th>
+                                    <th class="sortable" data-sort="bergabung" style="cursor: pointer; user-select: none;">BERGABUNG <i class="fas fa-sort" style="color: var(--text-muted); font-size: 0.8rem; margin-left: 5px;"></i></th>
+                                    <th class="sortable" data-sort="penghimpunan" style="cursor: pointer; user-select: none;">PENGHIMPUNAN <i class="fas fa-sort" style="color: var(--text-muted); font-size: 0.8rem; margin-left: 5px;"></i></th>
+                                    <th class="sortable" data-sort="skala" style="cursor: pointer; user-select: none;">LEVEL <i class="fas fa-sort" style="color: var(--text-muted); font-size: 0.8rem; margin-left: 5px;"></i></th>
+                                    <th class="sortable" data-sort="seharusnya" style="cursor: pointer; user-select: none;">IURAN SEHARUSNYA <i class="fas fa-sort" style="color: var(--text-muted); font-size: 0.8rem; margin-left: 5px;"></i></th>
+                                    <th class="sortable" data-sort="target_iuran" style="cursor: pointer; user-select: none;">KOMITMEN <i class="fas fa-sort" style="color: var(--text-muted); font-size: 0.8rem; margin-left: 5px;"></i></th>
+                                    <th class="sortable" data-sort="termin_pembayaran" style="cursor: pointer; user-select: none;">TERMIN <i class="fas fa-sort" style="color: var(--text-muted); font-size: 0.8rem; margin-left: 5px;"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody id="komitmen-table-body">
+                                <tr>
+                                    <td colspan="6" style="text-align: center; padding: 2rem;">Memuat data komitmen...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="tab-ketentuan" class="tab-content" style="display: none;">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3 style="margin: 0;">Tabel Acuan Iuran Anggota (Berdasarkan Penghimpunan)</h3>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 50px;">NO</th>
+                                    <th>PENGHIMPUNAN TAHUN SEBELUMNYA</th>
+                                    <th>IURAN / BULAN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Rp. 100 juta s/d Rp. 250 juta</td><td>Rp 100.000,-</td></tr>
+                                <tr><td>2</td><td>Rp. 250 juta s/d Rp. 500 juta</td><td>Rp 150.000,-</td></tr>
+                                <tr><td>3</td><td>Rp. 500 juta s/d Rp. 750 juta</td><td>Rp 200.000,-</td></tr>
+                                <tr><td>4</td><td>Rp. 750 juta s/d &lt; Rp. 1 miliar</td><td>Rp 250.000,-</td></tr>
+                                <tr><td>5</td><td>Rp 1 miliar s/d Rp 3 miliar</td><td>Rp 500.000,-</td></tr>
+                                <tr><td>6</td><td>Rp 3 miliar s/d Rp 5 miliar</td><td>Rp 1.000.000,-</td></tr>
+                                <tr><td>7</td><td>Rp 5 miliar s/d Rp 10 miliar</td><td>Rp 2.000.000,-</td></tr>
+                                <tr><td>8</td><td>Rp 10 miliar s/d Rp 20 miliar</td><td>Rp 3.000.000,-</td></tr>
+                                <tr><td>9</td><td>Rp 20 miliar lebih</td><td>Rp 4.000.000,-</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Tab PIC Keuangan -->
+                <div id="tab-pic" class="tab-content" style="display: none;">
+                    <div class="table-container">
+                        <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3 style="margin: 0;">Direktori PIC Keuangan</h3>
+                            <div class="search-bar">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="search-pic" class="form-control" placeholder="Cari nama lembaga atau PIC...">
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>LEMBAGA</th>
+                                    <th>NAMA PIC</th>
+                                    <th>JABATAN</th>
+                                    <th>KONTAK</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pic-table-body">
+                                <tr><td colspan="4" style="text-align: center;">Memuat data...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab Pimpinan -->
+                <div id="tab-pimpinan" class="tab-content" style="display: none;">
+                    <div class="table-container">
+                        <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3 style="margin: 0;">Direktori Pimpinan</h3>
+                            <div class="search-bar">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="search-pimpinan" class="form-control" placeholder="Cari nama lembaga atau pimpinan...">
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>LEMBAGA</th>
+                                    <th>NAMA PIMPINAN</th>
+                                    <th>JABATAN</th>
+                                    <th>KONTAK</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pimpinan-table-body">
+                                <tr><td colspan="4" style="text-align: center;">Memuat data...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
             </div>
         </main>
     </div>
@@ -98,12 +450,63 @@ Halo Bapak/Ibu perwakilan [Lembaga], kami dari Sekretariat FOZ mengingatkan bahw
         </div>
     </div>
 
+    <!-- Modal Edit Komitmen -->
+    <div class="modal" id="modal-edit-komitmen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sesuaikan Komitmen Iuran</h3>
+                <span class="close-modal" onclick="closeModal('modal-edit-komitmen')">&times;</span>
+            </div>
+            <form id="form-edit-komitmen" onsubmit="saveKomitmen(event)">
+                <input type="hidden" id="edit-komitmen-id">
+                <div class="form-group" style="margin-top: 1rem; margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.85rem;">Lembaga</label>
+                    <input type="text" id="edit-komitmen-lembaga" class="form-control" readonly style="background-color: #f1f5f9; color: var(--text-muted);">
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.85rem;">Komitmen (Rp)</label>
+                    <input type="number" id="edit-komitmen-nominal" class="form-control" required placeholder="Masukkan nominal...">
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.85rem;">Termin Pembayaran</label>
+                    <select id="edit-komitmen-termin" class="form-control">
+                        <option value="Bulan">Bulanan</option>
+                        <option value="Semester">Semesteran</option>
+                        <option value="Tahun">Tahunan</option>
+                    </select>
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+                    <button type="button" class="btn" onclick="closeModal('modal-edit-komitmen')">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
     <script src="../js/auth.js"></script>
     <script src="../js/sidebar.js"></script>
-    <script src="js/layanan1-core.js"></script>
+    <script src="../data-zakat/komitmen_iuran.js"></script>
+    <script src="js/layanan1-core.js?v=10"></script>
     <script>
         function closeModal(id) {
             document.getElementById(id).classList.remove('active');
+        }
+
+        function switchTab(tabId, element) {
+            // Remove active class from all tabs and contents
+            document.querySelectorAll('.tab-item').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.remove('active');
+                el.style.display = 'none';
+            });
+            
+            // Add active class to clicked tab and target content
+            element.classList.add('active');
+            const target = document.getElementById(tabId);
+            target.classList.add('active');
+            target.style.display = 'block';
         }
     </script>
 </body>

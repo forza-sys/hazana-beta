@@ -153,6 +153,11 @@ const HazanaAuth = {
 
         if (isPublic) return;
 
+        if (sessionStorage.getItem('hazana_beta_auth') === 'true') {
+            console.log("Bypass auth for preview link.");
+            return;
+        }
+
         const user = await this.guard();
         if (user) {
             window.HAZANA_USER = user;

@@ -1,0 +1,2867 @@
+[
+    {
+        "nama_lembaga": "Dompet Dhuafa",
+        "pimpinan": {
+            "nama": "Rahmad Riyadi",
+            "jabatan": "Ketua Yayasan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Mba Utie",
+            "jabatan": "Sekretaris",
+            "kontak": "0811-8779-844",
+            "wa": "628118779844"
+        }
+    },
+    {
+        "nama_lembaga": "Rumah Zakat",
+        "pimpinan": {
+            "nama": "Nur Efendi",
+            "jabatan": "CEO",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Dang Heppy",
+            "jabatan": "",
+            "kontak": "0818-0990-3880",
+            "wa": "6281809903880"
+        }
+    },
+    {
+        "nama_lembaga": "Inisiatif Zakat Indonesia (IZI)",
+        "pimpinan": {
+            "nama": "Wildhan Dewayana",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Surisman",
+            "jabatan": "Kepala Corsec",
+            "kontak": "0811-2265-918",
+            "wa": "628112265918"
+        }
+    },
+    {
+        "nama_lembaga": "Baitul Maal Hidayatullah (BMH)",
+        "pimpinan": {
+            "nama": "Supendi",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Ade Syariful Alam",
+            "jabatan": "Kepala HRD",
+            "kontak": "0813-2248-2220",
+            "wa": "6281322482220"
+        }
+    },
+    {
+        "nama_lembaga": "Daarut Tauhid Peduli",
+        "pimpinan": {
+            "nama": "Bacharul Ahsana",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Muji",
+            "jabatan": "HRD",
+            "kontak": "0877-8761-5287",
+            "wa": "6287787615287"
+        }
+    },
+    {
+        "nama_lembaga": "Mandiri Amal Insani Foundation",
+        "pimpinan": {
+            "nama": "Erwin Setiawan",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Janatri",
+            "jabatan": "Corsec",
+            "kontak": "0852-9397-5341",
+            "wa": "6285293975341"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Al-Azhar",
+        "pimpinan": {
+            "nama": "H. Daram. S.Pd",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Rahmatulloh Sidik",
+            "jabatan": "Wakil Direktur",
+            "kontak": "0812-8057-1098",
+            "wa": "6281280571098"
+        }
+    },
+    {
+        "nama_lembaga": "LAZNAS Lembaga Manajemen Infaq",
+        "pimpinan": {
+            "nama": "Agung Wicaksono",
+            "jabatan": "Presiden Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Citra Widuri",
+            "jabatan": "Direktur Riset",
+            "kontak": "0838-5606-2000",
+            "wa": "6283856062000"
+        }
+    },
+    {
+        "nama_lembaga": "LAZNAS Yayasan Dana Sosial Al-Falah",
+        "pimpinan": {
+            "nama": "Jauhari Sani",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Nafsiyah",
+            "jabatan": "Corsec",
+            "kontak": "0857-0621-2026",
+            "wa": "6285706212026"
+        }
+    },
+    {
+        "nama_lembaga": "PPPA Daarul Qur\u2019an",
+        "pimpinan": {
+            "nama": "Abdul Ghofur",
+            "jabatan": "Direktur utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Nanang",
+            "jabatan": "Chief Coorporate Secretary",
+            "kontak": "0811-256-376",
+            "wa": "62811256376"
+        }
+    },
+    {
+        "nama_lembaga": "Baitul Maal Muamalat",
+        "pimpinan": {
+            "nama": "Nanang Basuki",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Galeh Pujonegoro",
+            "jabatan": "General Manager",
+            "kontak": "0815-6666-567",
+            "wa": "628156666567"
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS Muhammadiyah",
+        "pimpinan": {
+            "nama": "Dr. Mahli Zainuddin Tago, M.Si",
+            "jabatan": "Plt. Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Edi Muktiono",
+            "jabatan": "",
+            "kontak": "0812-8392-9000",
+            "wa": "6281283929000"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Baitul Maal BRILiaN",
+        "pimpinan": {
+            "nama": "Dwi Iqbal Noviawan",
+            "jabatan": "General Manager",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Rizal",
+            "jabatan": "Corsec",
+            "kontak": "0812-9481-4621",
+            "wa": "6281294814621"
+        }
+    },
+    {
+        "nama_lembaga": "Baitulmal Ummat Islam BNI",
+        "pimpinan": {
+            "nama": "Drs. H. Sudirman, MM",
+            "jabatan": "Ketua Badan Pelaksana",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Bachfuandi",
+            "jabatan": "",
+            "kontak": "0812-9688-6611",
+            "wa": "6281296886611"
+        }
+    },
+    {
+        "nama_lembaga": "Baituzzakah Pertamina",
+        "pimpinan": {
+            "nama": "Susilo",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Sukendar",
+            "jabatan": "General Manager",
+            "kontak": "0813-8253-7596",
+            "wa": "6281382537596"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Baitul Maal PLN",
+        "pimpinan": {
+            "nama": "Salman Al Farisi",
+            "jabatan": "Deputi Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Salman Al Farisi",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "081-7997-5495",
+            "wa": "628179975495"
+        }
+    },
+    {
+        "nama_lembaga": "BAZNAS (BAZIS) DKI Jakarta",
+        "pimpinan": {
+            "nama": "Dr. Akhmad Abu Bakar",
+            "jabatan": "Ketua",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Rini Suprihartanti",
+            "jabatan": "",
+            "kontak": "0813-8150-4098",
+            "wa": "6281381504098"
+        }
+    },
+    {
+        "nama_lembaga": "LAZNAS Bangun Sejahtera Mitra Umat",
+        "pimpinan": {
+            "nama": "Sukoriyanto Saputro",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Humairoh Anahdi",
+            "jabatan": "",
+            "kontak": "0877-8881-0428",
+            "wa": "6287788810428"
+        }
+    },
+    {
+        "nama_lembaga": "LAZNAS Rumah Yatim Ar-Rohman",
+        "pimpinan": {
+            "nama": "Nugroho Bejo Wismono",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Abdurrahman",
+            "jabatan": "Wakil Direktur",
+            "kontak": "0821-2371-5328",
+            "wa": "6282123715328"
+        }
+    },
+    {
+        "nama_lembaga": "Pusat Zakat Umat Persis",
+        "pimpinan": {
+            "nama": "Ahmad Hasan Ridwan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Angga Nugraha",
+            "jabatan": "General Manager",
+            "kontak": "0815-6051-984",
+            "wa": "628156051984"
+        }
+    },
+    {
+        "nama_lembaga": "Amanah Astra",
+        "pimpinan": {
+            "nama": "Ganjar Gumilar",
+            "jabatan": "General Manager",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZNAS Dewan Da\u2019wah Islamiyah Indonesia",
+        "pimpinan": {
+            "nama": "Tjaturadi",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Ramdani",
+            "jabatan": "Kepala Corsec",
+            "kontak": "0813-1986-5231",
+            "wa": "6281319865231"
+        }
+    },
+    {
+        "nama_lembaga": "LAZNAS Nurul Hayat",
+        "pimpinan": {
+            "nama": "Heri Latief",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Ahmad Rifa'i",
+            "jabatan": "",
+            "kontak": "0822-3399-9221",
+            "wa": "6282233999221"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Al-Ihsan Jawa Tengah",
+        "pimpinan": {
+            "nama": "Doso Sutrisno",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Portal Infaq",
+        "pimpinan": {
+            "nama": "Faizaluddin",
+            "jabatan": "General Manager",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Jakarta Amanah Mulia",
+        "pimpinan": {
+            "nama": "Rajin Abdul Aziz",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Bangun Negeri Kita (BANGKIT Foundation)",
+        "pimpinan": {
+            "nama": "Rini Kurniawati",
+            "jabatan": "Pimpinan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "0813-6935-2665",
+            "wa": "6281369352665"
+        }
+    },
+    {
+        "nama_lembaga": "UPZ Garuda Indonesia",
+        "pimpinan": {
+            "nama": "Setyasnomo",
+            "jabatan": "Pimpinan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "UPZ Yaumil Badak LNG Bontang",
+        "pimpinan": {
+            "nama": "Joni Patra",
+            "jabatan": "Pimpinan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "MTT Foundation",
+        "pimpinan": {
+            "nama": "Achsinanto Risantosa",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "NU-Care LAZISNU",
+        "pimpinan": {
+            "nama": "Abdur Rouf, M. Hum",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Harapan Dhuafa",
+        "pimpinan": {
+            "nama": "Indah Prihanande",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Ii Irfai (Mang Ii)",
+            "jabatan": "",
+            "kontak": "0822-9872-7382",
+            "wa": "6282298727382"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Dompet Amanah Umat",
+        "pimpinan": {
+            "nama": "Iqbal Farabi Anas",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Solo Peduli",
+        "pimpinan": {
+            "nama": "Sidik Anshori",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Baitulmal Forum Komunikasi Aktivis Masjid (FKAM)",
+        "pimpinan": {
+            "nama": "Agung Budiman",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Taufiq",
+            "jabatan": "",
+            "kontak": "0856-4692-9331",
+            "wa": "6285646929331"
+        }
+    },
+    {
+        "nama_lembaga": "BP ZIS Indosat",
+        "pimpinan": {
+            "nama": "Wakhid Efendi",
+            "jabatan": "Ketua Badan Pengelola",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Arya",
+            "jabatan": "",
+            "kontak": "0857-7791-1079",
+            "wa": "6285777911079"
+        }
+    },
+    {
+        "nama_lembaga": "Bulan Sabit Merah Indonesia Sumatera Utara",
+        "pimpinan": {
+            "nama": "Dr. Nuryunita Nainggolan, Sp. P(K)",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Hendrik",
+            "jabatan": "Sekretaris",
+            "kontak": "0852-7562-5209",
+            "wa": "6285275625209"
+        }
+    },
+    {
+        "nama_lembaga": "Cerdas Bersama Zakat",
+        "pimpinan": {
+            "nama": "Yudo",
+            "jabatan": "Ketua",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Dompet Amal Sejahtera Ibnu Abbas NTB",
+        "pimpinan": {
+            "nama": "Tarsito",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Dompet Peduli Lentera Hati",
+        "pimpinan": {
+            "nama": "Hajar Awaluddin",
+            "jabatan": "Pimpinan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Aida",
+            "jabatan": "Bag, Keuangan",
+            "kontak": "0852-5429-6117",
+            "wa": "6285254296117"
+        }
+    },
+    {
+        "nama_lembaga": "Dompet Sosial Madani Bali",
+        "pimpinan": {
+            "nama": "Andy Krisna",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Gilang",
+            "jabatan": "HRD",
+            "kontak": "0877-6302-7344",
+            "wa": "6287763027344"
+        }
+    },
+    {
+        "nama_lembaga": "Gerak Sedekah Cilacap",
+        "pimpinan": {
+            "nama": "Hidayat",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Raden Doddy",
+            "jabatan": "Ketua Pelaksana Harian",
+            "kontak": "0857-1543-0282",
+            "wa": "6285715430282"
+        }
+    },
+    {
+        "nama_lembaga": "Global Zakat",
+        "pimpinan": {
+            "nama": "Sutaryo",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Fitrah",
+            "jabatan": "HCM",
+            "kontak": "0856-1788-169",
+            "wa": "628561788169"
+        }
+    },
+    {
+        "nama_lembaga": "Indonesia Berbagi",
+        "pimpinan": {
+            "nama": "Dadan Sundana",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Epi",
+            "jabatan": "Marcom",
+            "kontak": "0856-0319-9350",
+            "wa": "6285603199350"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Al Bunyan",
+        "pimpinan": {
+            "nama": "Imam Saputra",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ As Salaam Jayapura",
+        "pimpinan": {
+            "nama": "Mohamad Huri, S.KM, M.Kes",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Cilacap",
+        "pimpinan": {
+            "nama": "Maryanto",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Edy",
+            "jabatan": "Bag. Keuangan",
+            "kontak": "0857-8875-6488",
+            "wa": "6285788756488"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Gema Indonesia Sejahtera",
+        "pimpinan": {
+            "nama": "Suratno",
+            "jabatan": "CEO",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Harsono",
+            "jabatan": "HRD",
+            "kontak": "0852-8922-5256",
+            "wa": "6285289225256"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Ibnu Sina",
+        "pimpinan": {
+            "nama": "Nana Dahliana",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Zainudin",
+            "jabatan": "Wakil Direktur",
+            "kontak": "0857-7766-8667",
+            "wa": "6285777668667"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Lidzikri",
+        "pimpinan": {
+            "nama": "Robby Kurnadi, S.E",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Nurul Fikri",
+        "pimpinan": {
+            "nama": "Elis Elyas",
+            "jabatan": "Direktur Operasional",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Swadaya Ummah",
+        "pimpinan": {
+            "nama": "Ahmad Riva'i",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Ulil Albab",
+        "pimpinan": {
+            "nama": "Ir. Munawar",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Dini",
+            "jabatan": "",
+            "kontak": "0813-7375-8040",
+            "wa": "6281373758040"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Ummul Quro'",
+        "pimpinan": {
+            "nama": "Ima Rismawati",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Syilvi",
+            "jabatan": "HRD",
+            "kontak": "0815-5302-2648",
+            "wa": "6281553022648"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Yayasan Amal Sosial Ash-Shohwah (YASA)",
+        "pimpinan": {
+            "nama": "Andi Tricahyono",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Zakat Sukses",
+        "pimpinan": {
+            "nama": "Sunarto Zulkifli",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Akbar",
+            "jabatan": "",
+            "kontak": "0857-8912-7348",
+            "wa": "6285789127348"
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS Nurul Falah",
+        "pimpinan": {
+            "nama": "Achmat Fatkurrazi",
+            "jabatan": "Pimpinan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Amin",
+            "jabatan": "",
+            "kontak": "0821-2044-4118",
+            "wa": "6282120444118"
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS Syuhada",
+        "pimpinan": {
+            "nama": "Roni Romansyah, S.E.I",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Supriyadi",
+            "jabatan": "",
+            "kontak": "0878-3955-4206",
+            "wa": "6287839554206"
+        }
+    },
+    {
+        "nama_lembaga": "Wahdah Inspirasi Zakat",
+        "pimpinan": {
+            "nama": "Syahruddin C. Asho",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZNAS Yatim Mandiri",
+        "pimpinan": {
+            "nama": "Mutrofin",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Lembaga Pengembangan Infaq",
+        "pimpinan": {
+            "nama": "Wiweko Wijayanto",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Parisada Peduli Umat",
+        "pimpinan": {
+            "nama": "Doyo",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Pondok Sedekah Indonesia",
+        "pimpinan": {
+            "nama": "Senggono",
+            "jabatan": "General Manager",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Rumah Harapan",
+        "pimpinan": {
+            "nama": "Agus Solihin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Rumah Pemberdayaan Ummat",
+        "pimpinan": {
+            "nama": "Bintoro",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Sahabat Dhuafa Mandiri",
+        "pimpinan": {
+            "nama": "Donny Eriyanto",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Sahabat Mustahiq Sejahtera",
+        "pimpinan": {
+            "nama": "Sahri",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Habibi",
+            "jabatan": "HRD",
+            "kontak": "0822-3434-3497",
+            "wa": "6282234343497"
+        }
+    },
+    {
+        "nama_lembaga": "Sinergi Foundation",
+        "pimpinan": {
+            "nama": "Asep Irawan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "CRM",
+            "kontak": "0813-2120-0100",
+            "wa": "6281321200100"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Bakrie Amanah",
+        "pimpinan": {
+            "nama": "Setiadi Ihsan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Yuli",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Daril Khairaini",
+        "pimpinan": {
+            "nama": "Eky Ariani",
+            "jabatan": "Ketua Yayasan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Insan Madani Jambi",
+        "pimpinan": {
+            "nama": "Fuji",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Kemanusiaan Nasional Kotak Amal Indonesia",
+        "pimpinan": {
+            "nama": "Maston",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Kesejahteraan Madani",
+        "pimpinan": {
+            "nama": "Sahabudin, Ak, MM",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Amiruddin",
+            "jabatan": "Dir. Pelaksana",
+            "kontak": "0812-8125-894",
+            "wa": "628128125894"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Pulau Harapan Cendekia",
+        "pimpinan": {
+            "nama": "Ashari Budi Perwira",
+            "jabatan": "General Affair",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Rahmatul Anwar",
+        "pimpinan": {
+            "nama": "Musjafa",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Anisa",
+            "jabatan": "Sekretaris",
+            "kontak": "0895-3981-83035",
+            "wa": "62895398183035"
+        }
+    },
+    {
+        "nama_lembaga": "Rumah Amal Salman",
+        "pimpinan": {
+            "nama": "Agis Nurholis",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Romi Hardiansyah",
+            "jabatan": "HRD",
+            "kontak": "0852-8423-9760",
+            "wa": "6285284239760"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Rumah Yatim dan Dhuafa",
+        "pimpinan": {
+            "nama": "Apud Dian",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Sedekah Harian",
+        "pimpinan": {
+            "nama": "Abdul Aziz",
+            "jabatan": "Ketua Yayasan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Tenda Visi Indonesia",
+        "pimpinan": {
+            "nama": "Ibrahim Munawar",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Baitul Maal Pupuk Kujang",
+        "pimpinan": {
+            "nama": "Sutrisno",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Baitulmal Tazkia",
+        "pimpinan": {
+            "nama": "Iwan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Saeful Aziz",
+            "jabatan": "Marcom",
+            "kontak": "0858-7632-9975",
+            "wa": "6285876329975"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Dana Peduli Ummat Kalimantan Timur",
+        "pimpinan": {
+            "nama": "Adi Wijaya",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Rahmat",
+            "jabatan": "",
+            "kontak": "0812-5484-6757",
+            "wa": "6281254846757"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Batam",
+        "pimpinan": {
+            "nama": "Syarifuddin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Mba Yasha",
+            "jabatan": "Corsec",
+            "kontak": "0822-8843-1110",
+            "wa": "6282288431110"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Harapan Amal Mulia",
+        "pimpinan": {
+            "nama": "Vickry Rinaldi Herdianto",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS Sultan Agung",
+        "pimpinan": {
+            "nama": "Hasanudin LC, MEI",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Baitul Maal BMT Beringharjo",
+        "pimpinan": {
+            "nama": "Ahmad Paryanto",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Baitul Maal BMT Bina Umat Mandiri",
+        "pimpinan": {
+            "nama": "Aris Aditya Resi",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Baitul Maal Mulia",
+        "pimpinan": {
+            "nama": "H. Maimun Nuryadi, SE",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Dompet Al-Qur'an Indonesia",
+        "pimpinan": {
+            "nama": "Agung Heru Setiawan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Baitul Maal Amanah",
+        "pimpinan": {
+            "nama": "Endy Samulyo",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Lembaga Amil Zakat Bina Sejahtera",
+        "pimpinan": {
+            "nama": "Johan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS UNS",
+        "pimpinan": {
+            "nama": "Catur Wibowo",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Peduli Kasih Anak Kalimantan",
+        "pimpinan": {
+            "nama": "Budiman Very",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "MTUA Rekind",
+        "pimpinan": {
+            "nama": "Dian Pasya",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Pecinta Anak Yatim Doeafa Indonesia Tercinta",
+        "pimpinan": {
+            "nama": "Denni",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "ROIS OJK Jakarta",
+        "pimpinan": {
+            "nama": "Ismail Riyadi",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Fariz",
+            "jabatan": "",
+            "kontak": "0857-7080-5087",
+            "wa": "6285770805087"
+        }
+    },
+    {
+        "nama_lembaga": "Pelopor Kepedulian",
+        "pimpinan": {
+            "nama": "Miftahudin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Rumah Manfaat",
+        "pimpinan": {
+            "nama": "Halah Mawaddah",
+            "jabatan": "Ketua",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Rumah Sosial KUTUB (R-SIK)",
+        "pimpinan": {
+            "nama": "Suhito",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Nanik",
+            "jabatan": "Corsec",
+            "kontak": "0811-9100-147",
+            "wa": "628119100147"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Al Irsyad",
+        "pimpinan": {
+            "nama": "Samsul Bahri",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Syamsul",
+            "jabatan": "IT",
+            "kontak": "0857-5906-6285",
+            "wa": "6285759066285"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Bina Muda",
+        "pimpinan": {
+            "nama": "Aang Nurgani",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Fadhil",
+            "jabatan": "",
+            "kontak": "0857-2222-3197",
+            "wa": "6285722223197"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Dana Kemanusiaan Dhuafa Magelang",
+        "pimpinan": {
+            "nama": "Bayu Muslih",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Budy Fatmanto",
+            "jabatan": "",
+            "kontak": "0852-9287-8308",
+            "wa": "6285292878308"
+        }
+    },
+    {
+        "nama_lembaga": "Dompet Sejuta Harapan",
+        "pimpinan": {
+            "nama": "Dr. Arif Bintoro Johan, M.Pd.",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Ibadurrahman",
+        "pimpinan": {
+            "nama": "Muhammad Ihsan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Rumah Itqon Zakat dan Infak",
+        "pimpinan": {
+            "nama": "Ismed Sanditama",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZDAI Lampung",
+        "pimpinan": {
+            "nama": "Nurhandoyo",
+            "jabatan": "Ketua Pelaksana Harian",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Prihtiono",
+            "jabatan": "Dir. Pelaksana",
+            "kontak": "0895-6166-98912",
+            "wa": "62895616698912"
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS Al Haromain",
+        "pimpinan": {
+            "nama": "Yalik",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Roy",
+            "jabatan": "Pincab. Jakarta",
+            "kontak": "0857-8483-1833",
+            "wa": "6285784831833"
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS IKADI",
+        "pimpinan": {
+            "nama": "Endri Nugraha",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS Khoiru Ummah",
+        "pimpinan": {
+            "nama": "Candra",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Solusi Zakat",
+        "pimpinan": {
+            "nama": "Harjito",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "U Care Indonesia",
+        "pimpinan": {
+            "nama": "Muhammad Anwar",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Yulia",
+            "jabatan": "Sekjend",
+            "kontak": "0813-8977-4482",
+            "wa": "6281389774482"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Al Iman",
+        "pimpinan": {
+            "nama": "Iman Rukmana",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Askar Kauny",
+        "pimpinan": {
+            "nama": "Deny Ibnu Hajar",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Baitul Qur'an Indonesia",
+        "pimpinan": {
+            "nama": "Bayu Bagas Ramadhan",
+            "jabatan": "Ketua",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Dompet Yatim Dhuafa",
+        "pimpinan": {
+            "nama": "Fandi Ahmad Izuddin",
+            "jabatan": "Manager fundraising",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Kebun Amal",
+        "pimpinan": {
+            "nama": "Ihing Permana, S.Ag",
+            "jabatan": "Ketua Harian",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Nahwa Nur",
+        "pimpinan": {
+            "nama": "Yusuf Cahyono",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Sinergi Sriwijaya Peduli",
+        "pimpinan": {
+            "nama": "Aidil Fitri",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Uda Fajar",
+            "jabatan": "HRD",
+            "kontak": "0811-7470-825",
+            "wa": "628117470825"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Yuk Peduli",
+        "pimpinan": {
+            "nama": "Nurwan Rifai Herdiana",
+            "jabatan": "Ketua Yayasan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Infaq Berkah Qurani",
+        "pimpinan": {
+            "nama": "Ali Muhamad",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Social Trust Fund UIN Syarif Hidayatullah Jakarta",
+        "pimpinan": {
+            "nama": "Amelia Fauzia",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Darussalam",
+        "pimpinan": {
+            "nama": "Uki Ari Wibowo",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Irfan",
+            "jabatan": "Pembina Yayasan",
+            "kontak": "0853-1226-7288",
+            "wa": "6285312267288"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Karyawan Muslim Rokan Indonesia - LAZNAS PHR",
+        "pimpinan": {
+            "nama": "Irman Budi Prasetyo",
+            "jabatan": "General Manager",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Graha Yatim & Dhuafa",
+        "pimpinan": {
+            "nama": "Saparna",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Akhmat Ripai",
+            "jabatan": "Sekretaris",
+            "kontak": "0878-8658-0319",
+            "wa": "6287886580319"
+        }
+    },
+    {
+        "nama_lembaga": "Lembaga Amil Zakat Infaq Shodaqoh dan Wakaf At-Taqwa",
+        "pimpinan": {
+            "nama": "Wahyudin, M.Pd.I",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Al Kahfi Peduli",
+        "pimpinan": {
+            "nama": "Wahid Aminudin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Taman Zakat Indonesia",
+        "pimpinan": {
+            "nama": "Ziyad",
+            "jabatan": "Ketua Pengurus",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Sosial Baitul Maal Itqan",
+        "pimpinan": {
+            "nama": "Edwin Gafitra Setiawan, S.H.",
+            "jabatan": "Ketua umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZNAS Mizan Amanah",
+        "pimpinan": {
+            "nama": "Dede Sutisna",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Goedang Zakat Al- Khairaat",
+        "pimpinan": {
+            "nama": "Eko Kurniadi Abdurrahman",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "One Care",
+        "pimpinan": {
+            "nama": "Angga Surya",
+            "jabatan": "Plt. Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Pak Fahmi",
+            "jabatan": "Admin",
+            "kontak": "0822-1044-8456",
+            "wa": "6282210448456"
+        }
+    },
+    {
+        "nama_lembaga": "Panti Yatim & Zakat",
+        "pimpinan": {
+            "nama": "T. Irawan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Koswara",
+            "jabatan": "",
+            "kontak": "0821-2100-2231",
+            "wa": "6282121002231"
+        }
+    },
+    {
+        "nama_lembaga": "BaitulMaalKu",
+        "pimpinan": {
+            "nama": "Yeni Nurjannah",
+            "jabatan": "CEO",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Fitrah Insan Madani",
+        "pimpinan": {
+            "nama": "Teguh Laksono",
+            "jabatan": "Ketua",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Teguh Laksono",
+            "jabatan": "",
+            "kontak": "0821-2430-3173",
+            "wa": "6282124303173"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Dompet Peduli Ummat Jatim",
+        "pimpinan": {
+            "nama": "Chamdi Basori, SH",
+            "jabatan": "Direktur Eksekutif",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Agus",
+            "jabatan": "Wakil Direktur",
+            "kontak": "0822-3489-2551",
+            "wa": "6282234892551"
+        }
+    },
+    {
+        "nama_lembaga": "UPZ BAZNAS Semen Padang",
+        "pimpinan": {
+            "nama": "Muhammad Arif",
+            "jabatan": "Kepala Pelaksana Harian",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Antoni",
+            "jabatan": "Corsec",
+            "kontak": "0853-7472-8001",
+            "wa": "6285374728001"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Huda Cendekia",
+        "pimpinan": {
+            "nama": "Irfan BHR Nurdin",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Amanah Takaful",
+        "pimpinan": {
+            "nama": "Ade Abdurrahman",
+            "jabatan": "Ketua",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Mba Juarti",
+            "jabatan": "Corsec",
+            "kontak": "0858-1488-0144",
+            "wa": "6285814880144"
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS Al Hilal",
+        "pimpinan": {
+            "nama": "H. Iwan Setiawan S.Si",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZISQU Lazis Qur'an",
+        "pimpinan": {
+            "nama": "Sigit Prasetyo",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Henri Dunant",
+            "jabatan": "Sekretaris",
+            "kontak": "0878-3955-9003",
+            "wa": "6287839559003"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Suara Hati Sidoarjo",
+        "pimpinan": {
+            "nama": "Rofiq Abidin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Iqomatun Nufus",
+            "jabatan": "Corsec",
+            "kontak": "0857-8185-0145",
+            "wa": "6285781850145"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Amal Terbaik Madania",
+        "pimpinan": {
+            "nama": "Dodi Pribadi",
+            "jabatan": "Direktur Sementara",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Indah",
+            "jabatan": "Corsec",
+            "kontak": "0852-8849-3094",
+            "wa": "6285288493094"
+        }
+    },
+    {
+        "nama_lembaga": "ZISWAF At - Taufiq",
+        "pimpinan": {
+            "nama": "Maizar, S.Sos, M.Pd.I",
+            "jabatan": "Kepala",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "OK OCE Peduli",
+        "pimpinan": {
+            "nama": "Hanif Sholaahuddin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Andi Maulana",
+            "jabatan": "",
+            "kontak": "0815-7350-5605",
+            "wa": "6281573505605"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Assalam Timika",
+        "pimpinan": {
+            "nama": "Supranoto, S.T",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Sukoharjo",
+        "pimpinan": {
+            "nama": "Sigit Wardono",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Taufiq",
+            "jabatan": "Corsec",
+            "kontak": "0857-7007-7318",
+            "wa": "6285770077318"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ AZKA Al Baitul Amien Jember",
+        "pimpinan": {
+            "nama": "Ach. Fathor Rosyid, M.Si",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Vicky",
+            "jabatan": "Manager",
+            "kontak": "0821-4081-5876",
+            "wa": "6282140815876"
+        }
+    },
+    {
+        "nama_lembaga": "Baitulmaal Munzalan Indonesia",
+        "pimpinan": {
+            "nama": "Muhammad Imam Muttaqin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Al-Qoyyim Sukoharjo",
+        "pimpinan": {
+            "nama": "Winarto",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Purwadi",
+            "jabatan": "",
+            "kontak": "0857-9395-8046",
+            "wa": "6285793958046"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Indonesia Berdaya Kreatif",
+        "pimpinan": {
+            "nama": "Aji Imam Muflih",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Jamal",
+            "jabatan": "",
+            "kontak": "0838-2734-9471",
+            "wa": "6283827349471"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Al Fatih",
+        "pimpinan": {
+            "nama": "Ahmad Zaelani",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Dompet Amal Pecinta Al Qur'an",
+        "pimpinan": {
+            "nama": "Ade Wartono",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Hadji Kalla",
+        "pimpinan": {
+            "nama": "Muhammad Zuhair",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Wanti",
+            "jabatan": "Administrasi",
+            "kontak": "0852-5516-6949",
+            "wa": "6285255166949"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Musa'adatul Ummah Al Ma'soem Kota Bandung",
+        "pimpinan": {
+            "nama": "Evan Agustianto",
+            "jabatan": "Ketua",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Kustendi",
+            "jabatan": "",
+            "kontak": "0852-2000-0598",
+            "wa": "6285220000598"
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS UNISIA",
+        "pimpinan": {
+            "nama": "Dr. Muzhoffar Akhwan, M.A",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Baitul Maal Barakatul Ummah Kota Bontang",
+        "pimpinan": {
+            "nama": "Isro Umarghani",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Rumah Peduli Umat",
+        "pimpinan": {
+            "nama": "Aos Wiharjono",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Ghufron",
+            "jabatan": "Administrasi",
+            "kontak": "0812-9684-4955",
+            "wa": "6281296844955"
+        }
+    },
+    {
+        "nama_lembaga": "#REF!",
+        "pimpinan": {
+            "nama": "#REF!",
+            "jabatan": "#REF!",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "#REF!",
+            "jabatan": "#REF!",
+            "kontak": "#REF!",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Sahabat Kebaikan Umat (SAKU)",
+        "pimpinan": {
+            "nama": "Muhammad Ervan Alviansyah",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Insan Peduli Umat (IPU)",
+        "pimpinan": {
+            "nama": "Suharjono",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Gugus Karya Mandiri",
+        "pimpinan": {
+            "nama": "Iwan Nirwana, A.Md",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Inspirasi Anak Negeri",
+        "pimpinan": {
+            "nama": "Darmawan Haryanto, S.H",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Baitul Maal Merapi Merbabu",
+        "pimpinan": {
+            "nama": "RM. Suryanto Sarjodiningrat",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Sahabat Yatim Indonesia",
+        "pimpinan": {
+            "nama": "Bobby Satria",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Madani Human Care (MHC) Dumai",
+        "pimpinan": {
+            "nama": "Dziqri Hanafi",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Persada Jatim Indonesia",
+        "pimpinan": {
+            "nama": "Rofiq Abidin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZIS Baiturrahman",
+        "pimpinan": {
+            "nama": "Slamet Surachmat, A.Md",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Nusa Charity",
+        "pimpinan": {
+            "nama": "Ismail Falahiey, S.T",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ An-Nur PT Indonesia Power",
+        "pimpinan": {
+            "nama": "Toto Wardoyo",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Adz Zikri Peduli",
+        "pimpinan": {
+            "nama": "Arif Abdurrahman",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Darul Akrim Inayah",
+        "pimpinan": {
+            "nama": "Wawan Hardiawan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Griya Zakat",
+        "pimpinan": {
+            "nama": "Muhammad Anas Muttaqin",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Bahagia Berbagi Indonesia",
+        "pimpinan": {
+            "nama": "Iman Suwartono",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Masjid Raya Bintaro (LAZ MRBJ)",
+        "pimpinan": {
+            "nama": "Muhammad",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Zakatku Bakti Persada",
+        "pimpinan": {
+            "nama": "Handi Prayoga, S.ST",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Rute Langkah Amanah - Semangatbantu.com",
+        "pimpinan": {
+            "nama": "Teuku Ghalib Muadzan",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Hanifah",
+            "jabatan": "Corsec",
+            "kontak": "0857-4334-5891",
+            "wa": "6285743345891"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Rumah Infaq",
+        "pimpinan": {
+            "nama": "Tika Ariandini Putri",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Mas Afit H. Muttaqin",
+            "jabatan": "Penghimpunan",
+            "kontak": "0896-3729-7592",
+            "wa": "6289637297592"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Risalah Charity",
+        "pimpinan": {
+            "nama": "H. Kamrizal, Lc., M.A",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Mba Icha",
+            "jabatan": "Corsec",
+            "kontak": "0821-8211-4615",
+            "wa": "6282182114615"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Tabungan Amal Saleh (LAZ Tamasa)",
+        "pimpinan": {
+            "nama": "Asfahani",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Pak Hendratno W",
+            "jabatan": "Administrasi",
+            "kontak": "0821-4082-5735",
+            "wa": "6282140825735"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Bangun Kecerdasan Bangsa (LAZ BKB)",
+        "pimpinan": {
+            "nama": "Heris Bhimo Cahyoadhi",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Tunasmuda Care (T.CARE)",
+        "pimpinan": {
+            "nama": "Hendra Ikhwan",
+            "jabatan": "Ketua Yayasan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Pak Laode",
+            "jabatan": "Administrasi",
+            "kontak": "0896-9597-1173",
+            "wa": "6289695971173"
+        }
+    },
+    {
+        "nama_lembaga": "Baitul Maal Al Furqon",
+        "pimpinan": {
+            "nama": "Firman Taufikuroman",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Pak Tri Minjufrony",
+            "jabatan": "Manager Program",
+            "kontak": "0877-8319-6886",
+            "wa": "6287783196886"
+        }
+    },
+    {
+        "nama_lembaga": "Explore! Humanity",
+        "pimpinan": {
+            "nama": "Ridhan Hafiedz",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Pak Satrio Nugroho",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Laju Peduli",
+        "pimpinan": {
+            "nama": "Rizqi Dwi Putra",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Mba Gustin",
+            "jabatan": "Corsec",
+            "kontak": "0856-9783-0891",
+            "wa": "6285697830891"
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Balqis Peduli ",
+        "pimpinan": {
+            "nama": "Ifan Shovi, S.Pd",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "LAZ Membangun Keluarga Utama (LAZ MKU)",
+        "pimpinan": {
+            "nama": "Supriyadi, S.IP, M.IP",
+            "jabatan": "Direktur Utama",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Cahaya Islam Mutiara Imani (CIMI)",
+        "pimpinan": {
+            "nama": "Ahmad Yancey",
+            "jabatan": "Ketua Yayasan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "ZISWAF Masjid Pelajar (ZISWAP)",
+        "pimpinan": {
+            "nama": "Suharto, S.Pi",
+            "jabatan": "Ketua Yayasan",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Mba Tri Suciningsih, SPd. SD",
+            "jabatan": "Direktur Utama",
+            "kontak": "0895-0673-0503",
+            "wa": "6289506730503"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Rumah Perubahan Indonesia (Saku Yatim)",
+        "pimpinan": {
+            "nama": "Moh. Chudzil Chikmat",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    },
+    {
+        "nama_lembaga": "Optimalisasi Sedekah Zakat dan Infak (LAZ OPSEZI)",
+        "pimpinan": {
+            "nama": "Farida Haryani, SP",
+            "jabatan": "Direktur",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "Harpiyansyah",
+            "jabatan": "Corsec",
+            "kontak": "0852-6675-9327",
+            "wa": "6285266759327"
+        }
+    },
+    {
+        "nama_lembaga": "Yayasan Wihdatul Ummah (WU)",
+        "pimpinan": {
+            "nama": "Ishaq Maulana",
+            "jabatan": "Ketua Umum",
+            "kontak": "#REF!",
+            "wa": ""
+        },
+        "pic_keuangan": {
+            "nama": "",
+            "jabatan": "",
+            "kontak": "",
+            "wa": ""
+        }
+    }
+]
