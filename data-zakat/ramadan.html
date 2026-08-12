@@ -255,6 +255,7 @@
               <th class="sortable" data-col="nama">Lembaga <i class="fas fa-sort"></i></th>
               <th class="sortable col-center" style="text-align: center;" data-col="skala">Skala <i class="fas fa-sort"></i></th>
               <th class="sortable col-num" style="text-align: left;" data-col="penghimpunan">Total Penghimpunan <i class="fas fa-sort"></i></th>
+              <th class="sortable col-num" style="text-align: left;" data-col="setara">Total Penyaluran <i class="fas fa-sort"></i></th>
               <th class="sortable col-num" style="text-align: center;" data-col="pertumbuhan">Pertumbuhan <i class="fas fa-sort"></i></th>
               
               <th class="sortable col-num" style="text-align: center;" data-col="pekurban">Muzakki/Donatur <i class="fas fa-sort"></i></th>
@@ -1121,6 +1122,7 @@
                 <td class="col-nama">${d.nama}</td>
                 <td style="text-align: center;">${skalaBadge}</td>
                 <td class="col-num" style="text-align: left;">Rp ${d.penghimpunan.toLocaleString('id-ID')}</td>
+                <td class="col-num" style="text-align: left;">Rp ${d.setara.toLocaleString('id-ID')}</td>
                 <td class="col-num" style="text-align: center;">${growthHtml}</td>
                 <td class="col-num" style="text-align: center;">${d.pekurban.toLocaleString('id-ID')}</td>
                 <td class="col-num" style="text-align: center;">${d.penerima.toLocaleString('id-ID')}</td>
